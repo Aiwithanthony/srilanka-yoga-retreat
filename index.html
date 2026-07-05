@@ -19,6 +19,7 @@
     <link href="https://fonts.googleapis.com" rel="preconnect"/>
     <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
     <!-- Preload Critical Resources -->
+    <link rel="preload" as="image" href="IMG_7534.webp" fetchpriority="high">
     <link rel="preload" as="image" href="island.jpeg" fetchpriority="high">
     <link rel="preload" as="image" href="Beige-and-Blue.png">
     <link rel="preload" as="image" href="Black-and-Blue.png">
@@ -334,6 +335,7 @@
                 left: 0;
                 right: 0;
                 height: 120px; /* Adjust this height to match your image needs */
+                background-color: var(--deep-teal); /* fallback while image loads */
                 background-image: url('IMG_7534.webp');
                 background-size: cover;
                 background-position: center top;
@@ -385,6 +387,7 @@
                 position: relative;
                 z-index: 1; /* Ensure text is above background */
                 color: white; /* White text for better contrast on background image */
+                background-color: var(--deep-teal); /* fallback while image loads */
                 background-image: url('IMG_7534.webp');
                 background-size: cover;
                 background-position: center 30%;
