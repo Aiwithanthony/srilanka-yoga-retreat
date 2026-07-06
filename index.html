@@ -1318,6 +1318,21 @@
             padding: 1.5rem 0 1.5rem 4rem;
         }
 
+        /* Banner strip variant: the artwork carries its own title/text, so the
+           full image is shown at natural height with no overlay or HTML text.
+           Double class keeps it winning over the mobile .sample-day-strip rule. */
+        .sample-day-strip.sample-day-strip--banner {
+            display: block;
+            min-height: 0;
+            padding: 0;
+        }
+
+        .sample-day-strip.sample-day-strip--banner img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+
         .sample-day-strip-bg {
             position: absolute;
             inset: 0;
@@ -4400,15 +4415,8 @@
             <p class="section-script daily-rhythm-text" style="font-family: 'Montserrat', sans-serif; font-size: 1rem; font-weight: 400; text-align: justify; max-width: 800px; margin: 1rem auto 0 auto; letter-spacing: 0.02em; line-height: 1.6; color: var(--warm-taupe);">Each chapter of the retreat unfolds a completely new face of the Island. Every stop has been carefully chosen for its character, its people, and the story it tells. Yoga is the thread that connects every experience, allowing you to slow down, become present &amp; fully absorb the island as it unfolds.</p>
         </div>
         <div class="sample-day-strips">
-            <div class="sample-day-strip">
-                <div class="sample-day-strip-bg">
-                    <img src="5th.jpg" alt="Ancient Sri Lanka" loading="lazy" style="object-position: center 66%;"/>
-                </div>
-                <div class="sample-day-strip-overlay"></div>
-                <div class="sample-day-strip-content">
-                    <div class="sample-day-keyword">Ancient Sri Lanka Revealed</div>
-                    <div class="sample-day-subtext">Sunrise Sigiriya Fortress climbing* · Royal Botanical Gardens · Sacred temple rituals · Kandyan Dance experience · Ancient Kingdoms &amp; Sacred Heritage · Lotus boat journey</div>
-                </div>
+            <div class="sample-day-strip sample-day-strip--banner">
+                <img src="ancient-strip.jpg" alt="Ancient Sri Lanka Revealed &mdash; Sunrise Sigiriya Fortress climb, Royal Botanical Gardens, sacred temple rituals, Kandyan dance experience, ancient kingdoms &amp; sacred heritage, lotus boat journey" loading="lazy"/>
             </div>
             <div class="sample-day-strip">
                 <div class="sample-day-strip-bg">
