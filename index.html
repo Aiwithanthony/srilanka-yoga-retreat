@@ -23,7 +23,7 @@
     <link rel="preload" as="image" href="island.jpeg" fetchpriority="high">
     <link rel="preload" as="image" href="Beige-and-Blue.png">
     <link rel="preload" as="image" href="Black-and-Blue.png">
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Lato:wght@300;400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Lato:wght@300;400&family=Montserrat:wght@300;400;500;600&family=Poppins:wght@200;300;400&display=swap" rel="stylesheet"/>
     <style>
         :root {
             --cream: #FDF8F3;
@@ -4281,6 +4281,164 @@
             }
         }
         /* SPACING-SYSTEM-V1 END */
+
+        /* ==================================================================
+           WHO THIS JOURNEY IS FOR — self-contained section, all selectors
+           scoped under .journey-section so nothing here touches the rest
+           of the page. Colors reuse the site's existing gold/cream tokens
+           instead of new hex values; fonts reuse Cormorant + a new Poppins
+           import (added to the Google Fonts link) for the lighter grid text.
+           ================================================================== */
+        .journey-section {
+            --gold: var(--soft-gold);
+            --rule: rgba(212, 184, 150, 0.25);
+            --title: var(--cream);
+            --body: rgba(253, 248, 243, 0.85);
+            --caption: rgba(253, 248, 243, 0.8);
+
+            position: relative;
+            overflow: hidden;
+            padding: clamp(3.5rem, 7vw, 6rem) clamp(1.25rem, 5vw, 4rem);
+            text-align: center;
+            font-family: 'Poppins', 'Montserrat', sans-serif;
+
+            background-image:
+                linear-gradient(rgba(11,13,20,0.42), rgba(11,13,20,0.36)),
+                url("Portrait.webp");
+            background-size: cover;
+            background-position: center;
+        }
+
+        .journey-section::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            background: radial-gradient(ellipse at 50% 45%, transparent 55%, rgba(0,0,0,0.38) 100%);
+        }
+
+        .journey-inner {
+            position: relative;
+            z-index: 1;
+            max-width: 1180px;
+            margin: 0 auto;
+        }
+
+        .journey-eyebrow {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 500;
+            color: var(--title);
+            text-transform: uppercase;
+            letter-spacing: 0.42em;
+            font-size: clamp(0.95rem, 2.6vw, 1.5rem);
+            margin: 0 0 0.25rem;
+            padding-left: 0.42em;
+        }
+
+        .journey-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 500;
+            color: var(--title);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            font-size: clamp(2.2rem, 7vw, 4.2rem);
+            line-height: 1;
+            margin: 0;
+        }
+
+        .journey-divider {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 14px;
+            margin: clamp(1.1rem, 3vw, 1.9rem) auto clamp(1.4rem, 3.5vw, 2.2rem);
+        }
+        .journey-divider .rule { height: 1px; width: clamp(70px, 22vw, 215px); }
+        .journey-divider .rule.left  { background: linear-gradient(to right, transparent, var(--gold)); }
+        .journey-divider .rule.right { background: linear-gradient(to left,  transparent, var(--gold)); }
+        .journey-divider .diamond {
+            width: 7px; height: 7px;
+            border: 1px solid var(--gold);
+            transform: rotate(45deg);
+            flex: none;
+        }
+
+        .journey-intro {
+            color: var(--body);
+            font-weight: 300;
+            font-size: clamp(0.95rem, 2.1vw, 1.18rem);
+            line-height: 1.72;
+            max-width: 640px;
+            margin: 0 auto;
+        }
+
+        .journey-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            column-gap: 0;
+            row-gap: clamp(2.4rem, 6vw, 3rem);
+            max-width: 540px;
+            margin: clamp(2.5rem, 6vw, 3.2rem) auto 0;
+        }
+
+        .journey-item {
+            padding: 0 clamp(0.9rem, 3vw, 1.3rem);
+        }
+        .journey-item:nth-child(even) { border-left: 1px solid var(--rule); }
+
+        .journey-item:nth-child(7) {
+            grid-column: 1 / -1;
+            border-left: none;
+            max-width: 62%;
+            margin-inline: auto;
+        }
+
+        .journey-icon {
+            color: var(--gold);
+            height: clamp(46px, 11vw, 60px);
+            margin: 0 auto clamp(0.9rem, 2.5vw, 1.25rem);
+        }
+        .journey-icon svg { height: 100%; width: auto; display: block; margin: 0 auto; }
+
+        .journey-text {
+            color: var(--caption);
+            font-weight: 300;
+            font-size: clamp(0.85rem, 3.4vw, 0.98rem);
+            line-height: 1.62;
+            margin: 0;
+        }
+
+        @media (min-width: 861px) {
+            .journey-section {
+                background-image:
+                    linear-gradient(rgba(11,13,20,0.42), rgba(11,13,20,0.36)),
+                    url("Landscape.webp");
+            }
+            .journey-grid {
+                grid-template-columns: repeat(8, 1fr);
+                max-width: 1180px;
+                row-gap: clamp(2.8rem, 4vw, 3.4rem);
+                margin-top: clamp(3rem, 4vw, 3.6rem);
+            }
+            .journey-item {
+                padding: 0 1.5rem;
+                border-left: none;
+                max-width: none;
+                margin: 0;
+            }
+            .journey-item:nth-child(1) { grid-column: 1 / 3; }
+            .journey-item:nth-child(2) { grid-column: 3 / 5; border-left: 1px solid var(--rule); }
+            .journey-item:nth-child(3) { grid-column: 5 / 7; border-left: 1px solid var(--rule); }
+            .journey-item:nth-child(4) { grid-column: 7 / 9; border-left: 1px solid var(--rule); }
+            .journey-item:nth-child(5) { grid-column: 2 / 4; grid-row: 2; }
+            .journey-item:nth-child(6) { grid-column: 4 / 6; grid-row: 2; border-left: 1px solid var(--rule); }
+            .journey-item:nth-child(7) { grid-column: 6 / 8; grid-row: 2; border-left: 1px solid var(--rule); }
+        }
+
+        @media (prefers-reduced-motion: no-preference) {
+            .journey-inner { animation: journeyFade 0.9s ease both; }
+        }
+        @keyframes journeyFade { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
     </style>
 </head>
 <body>
@@ -4483,7 +4641,7 @@
                 <div class="sample-day-strip-overlay"></div>
                 <div class="sample-day-strip-content">
                     <div class="sample-day-keyword">Wild Sri Lanka Revealed</div>
-                    <div class="sample-day-subtext">Jungle immersion &mdash; resort living · Minneriya wild elephant encounters* · Yala Safari*</div>
+                    <div class="sample-day-subtext">Jungle immersion resort living · Minneriya wild elephant encounters · Yala Safari</div>
                 </div>
             </div>
             <div class="sample-day-strip">
@@ -4582,20 +4740,6 @@
             </div>
         </div>
     </div>
-
-        <!-- Asymmetric duo -->
-        <div class="gallery-section gallery-asymmetric">
-            <div class="gallery-asymmetric-img">
-                <video controls loop playsinline preload="metadata" id="video-1" poster="IMG_0077.JPG">
-                    <source src="IMG_9643.MP4" type="video/mp4">
-                </video>
-            </div>
-            <div class="gallery-asymmetric-img">
-                <video controls loop playsinline preload="metadata" id="video-2" poster="IMG_0078.JPG" class="poster-center-bottom">
-                    <source src="IMG_9714.MP4" type="video/mp4">
-                </video>
-            </div>
-        </div>
 
     <!-- Founder Section -->
     <section class="founder" id="founder">
@@ -4719,33 +4863,138 @@
     </section>
 
     <!-- ============================================
-         VISUAL GALLERY - Editorial Dream Sequence
+         WHO THIS JOURNEY IS FOR
          ============================================ -->
-    <section class="visual-gallery">
+    <section class="journey-section">
+      <div class="journey-inner">
 
-        <!-- Full-bleed final image -->
-        <div class="gallery-section gallery-fullbleed">
-            <img src="IMG_7407.webp" alt="Woman floating in crystal clear water" loading="lazy" class="desktop-lively-evenings-img"/>
-            <img src="Mobile-tribe.jpg" alt="Lively evenings" loading="lazy" class="mobile-lively-evenings-img"/>
-            <div class="gallery-overlay" style="align-items: flex-start; padding-top: 4rem;">
-                <div class="gallery-text">
-                    <p class="script">WHO THIS JOURNEY IS FOR</p>
-                    <p class="sunset-text" style="font-family: 'Montserrat', sans-serif; font-size: 1.05rem; font-weight: 500; text-align: center; letter-spacing: 0.02em; line-height: 1.6; word-spacing: 0.1em; color: #D4B896; margin: 0.75rem auto 0 auto; max-width: 760px; white-space: normal;">Thoughtfully designed from beginning to end, every destination, stay and experience has been chosen with purpose. The result is a journey that feels warm, personal and unlike any other.</p>
-                    <ul style="list-style: none; padding: 0 1rem; margin: 1.25rem auto 0 auto; max-width: 640px; font-family: 'Montserrat', sans-serif; font-size: 0.95rem; font-weight: 400; letter-spacing: 0.02em; line-height: 1.9; color: white; text-align: left;">
-                        <li>&#10038; Want to experience the real Sri Lanka&mdash;beautifully, not hurriedly.</li>
-                        <li>&#10038; Choose places with character over places everyone has already seen.</li>
-                        <li>&#10038; Appreciate exceptional stays with character, soul and a sense of place.</li>
-                        <li>&#10038; Believe yoga belongs in life&mdash;not just on the mat.</li>
-                        <li>&#10038; Want to experience Sri Lanka in all its faces&mdash;from ancient kingdoms and tea hills to wildlife, coastline and local culture.</li>
-                        <li>&#10038; Seek genuine human connection and a diverse community.</li>
-                        <li>&#10038; Appreciate journeys where every detail has already been thoughtfully considered.</li>
-                    </ul>
-                </div>
-            </div>
+        <p class="journey-eyebrow">Who This</p>
+        <h2 class="journey-title">Journey Is For</h2>
+
+        <div class="journey-divider">
+          <span class="rule left"></span>
+          <span class="diamond"></span>
+          <span class="rule right"></span>
         </div>
 
+        <p class="journey-intro">Thoughtfully designed from beginning to end, every destination, stay and experience has been chosen with purpose. The result is a journey that feels warm, personal and unlike any other.</p>
+
+        <div class="journey-grid">
+
+          <div class="journey-item">
+            <div class="journey-icon">
+              <svg viewBox="0 0 72 56" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M23 40a13 13 0 0 1 26 0"/>
+                <line x1="36" y1="14" x2="36" y2="7"/>
+                <line x1="23" y1="20" x2="18.5" y2="15.5"/>
+                <line x1="49" y1="20" x2="53.5" y2="15.5"/>
+                <line x1="16" y1="33" x2="10" y2="33"/>
+                <line x1="56" y1="33" x2="62" y2="33"/>
+                <line x1="14" y1="47" x2="58" y2="47"/>
+                <path d="M14 52q5.5-4 11 0t11 0 11 0 11 0"/>
+              </svg>
+            </div>
+            <p class="journey-text">You want to experience the real Sri Lanka&mdash;beautifully, not hurriedly.</p>
+          </div>
+
+          <div class="journey-item">
+            <div class="journey-icon">
+              <svg viewBox="0 0 80 56" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="20" y1="52" x2="60" y2="52"/>
+                <line x1="26" y1="48" x2="54" y2="48"/>
+                <path d="M31 48C31 33 35 27 40 27s9 6 9 21"/>
+                <rect x="37" y="22.5" width="6" height="4.5" rx="0.5"/>
+                <line x1="40" y1="22.5" x2="40" y2="13"/>
+                <line x1="36.5" y1="19" x2="43.5" y2="19"/>
+                <line x1="37.5" y1="16" x2="42.5" y2="16"/>
+                <circle cx="40" cy="12" r="1.2"/>
+                <path d="M20 52c-1.5-6-2-11-0.5-15"/>
+                <path d="M19.5 37c-3-1.5-6.5-1-9 1"/>
+                <path d="M19.5 37c-2-2.5-5-4-8-3.5"/>
+                <path d="M19.5 37c-0.5-3 0.5-6 2.5-8"/>
+                <path d="M60 52c1.5-6 2-11 0.5-15"/>
+                <path d="M60.5 37c3-1.5 6.5-1 9 1"/>
+                <path d="M60.5 37c2-2.5 5-4 8-3.5"/>
+                <path d="M60.5 37c0.5-3-0.5-6-2.5-8"/>
+              </svg>
+            </div>
+            <p class="journey-text">You value authentic places over crowded tourist stops.</p>
+          </div>
+
+          <div class="journey-item">
+            <div class="journey-icon">
+              <svg viewBox="0 0 84 56" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="21" y="15" width="42" height="9" rx="2"/>
+                <rect x="26" y="18" width="14" height="6" rx="2.5"/>
+                <rect x="44" y="18" width="14" height="6" rx="2.5"/>
+                <path d="M21 24h42l8 15H13z"/>
+                <line x1="17" y1="33.5" x2="67" y2="33.5"/>
+                <line x1="14" y1="39" x2="13" y2="45"/>
+                <line x1="70" y1="39" x2="71" y2="45"/>
+              </svg>
+            </div>
+            <p class="journey-text">You appreciate exceptional stays with character, soul and a sense of place.</p>
+          </div>
+
+          <div class="journey-item">
+            <div class="journey-icon">
+              <svg viewBox="0 0 80 56" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M40 12c-6 12-6 24 0 32 6-8 6-20 0-32z"/>
+                <path d="M40 44c-10-6-16-14-18-22 8 2 15 10 18 22z"/>
+                <path d="M40 44c10-6 16-14 18-22-8 2-15 10-18 22z"/>
+                <path d="M40 44c-14-2-26-6-32-14 10 0 22 6 32 14z"/>
+                <path d="M40 44c14-2 26-6 32-14-10 0-22 6-32 14z"/>
+                <path d="M23 47q17 6 34 0"/>
+              </svg>
+            </div>
+            <p class="journey-text">You believe yoga belongs in life&mdash;not just on the mat.</p>
+          </div>
+
+          <div class="journey-item">
+            <div class="journey-icon">
+              <svg viewBox="0 0 80 56" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="10" y1="46" x2="70" y2="46"/>
+                <path d="M17 46L29 24l11 15 6-6"/>
+                <path d="M40 39l9-9 14 16"/>
+                <path d="M53 46c-1-4-1-7 0-10"/>
+                <path d="M53 36c2.5-1.5 5.5-1.5 8 0"/>
+                <path d="M53 36c-2.5-1.5-5.5-1.5-8 0"/>
+                <path d="M53 36c0-2.5 1-5 2.5-6.5"/>
+              </svg>
+            </div>
+            <p class="journey-text">You want to experience Sri Lanka in all its faces&mdash;from ancient kingdoms and tea hills to wildlife, coastline and local culture.</p>
+          </div>
+
+          <div class="journey-item">
+            <div class="journey-icon">
+              <svg viewBox="0 0 80 56" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="24" cy="21" r="6"/>
+                <path d="M13 43c0-9 6-12 11-12"/>
+                <circle cx="56" cy="21" r="6"/>
+                <path d="M67 43c0-9-6-12-11-12"/>
+                <circle cx="40" cy="25" r="7"/>
+                <path d="M27 47c0-10 6-13 13-13s13 3 13 13"/>
+              </svg>
+            </div>
+            <p class="journey-text">You seek genuine human connection and unforgettable shared moments.</p>
+          </div>
+
+          <div class="journey-item">
+            <div class="journey-icon">
+              <svg viewBox="0 0 72 56" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M30 14v-3a3 3 0 0 1 3-3h6a3 3 0 0 1 3 3v3"/>
+                <rect x="18" y="14" width="36" height="34" rx="4"/>
+                <line x1="30" y1="14" x2="30" y2="48"/>
+                <line x1="42" y1="14" x2="42" y2="48"/>
+              </svg>
+            </div>
+            <p class="journey-text">You appreciate journeys that are thoughtfully curated, so all you have to do is arrive.</p>
+          </div>
+
+        </div>
+      </div>
     </section>
-    <!-- End Visual Gallery -->
+    <!-- End Who This Journey Is For -->
 
     <!-- Inclusions Section -->
     <section class="inclusions">
