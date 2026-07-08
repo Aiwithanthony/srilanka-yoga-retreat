@@ -1936,7 +1936,7 @@
             display: flex;
             align-items: flex-start;
             gap: 0.75rem;
-            margin-bottom: 0.9rem;
+            margin-bottom: 0.55rem;
             font-family: 'Lato', sans-serif;
             font-size: 1rem;
             font-weight: 400;
@@ -1968,7 +1968,7 @@
             letter-spacing: 0.05em;
             text-transform: uppercase;
             color: var(--deep-teal);
-            margin: 1.75rem 0 0.9rem;
+            margin: 1.2rem 0 0.6rem;
         }
 
         .inclusion-category:first-of-type {
@@ -2067,18 +2067,20 @@
             padding: 2.5rem;
         }
 
+        /* Plain statement line — deliberately not styled like a button */
         .promo-banner {
-            background: linear-gradient(90deg, var(--deep-teal), var(--ocean));
-            color: white;
-            padding: 1rem 1.5rem;
-            border-radius: 12px;
+            background: none;
+            color: var(--deep-teal);
+            padding: 0;
+            border-radius: 0;
             text-align: center;
-            margin-bottom: 2rem;
+            margin-bottom: 1.5rem;
         }
 
         .promo-banner p {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 1rem;
+            font-family: 'Cormorant Garamond', serif;
+            font-style: italic;
+            font-size: 1.35rem;
             font-weight: 500;
         }
 
@@ -2157,7 +2159,9 @@
             cursor: pointer;
             transition: all 0.3s ease;
             text-decoration: none;
-            display: block;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
         }
 
         .cta-box:hover {
@@ -2310,6 +2314,33 @@
             align-items: center;
             justify-content: center;
             background: rgba(0,0,0,0.2);
+        }
+
+        /* WHO THIS JOURNEY IS FOR: the text defines the section height so the
+           checklist can never be clipped; the photo fills behind it */
+        .visual-gallery .gallery-fullbleed {
+            height: auto;
+            min-height: 85vh;
+        }
+
+        .visual-gallery .gallery-fullbleed img {
+            position: absolute;
+            inset: 0;
+            height: 100%;
+        }
+
+        .visual-gallery .gallery-overlay {
+            position: relative;
+            inset: auto;
+            min-height: 85vh;
+            padding-bottom: 3rem;
+        }
+
+        @media (max-width: 768px) {
+            .visual-gallery .gallery-fullbleed,
+            .visual-gallery .gallery-overlay {
+                min-height: 70vh;
+            }
         }
 
         .gallery-text {
@@ -3524,7 +3555,8 @@
             .mobile-testimonials-subtitle {
                 display: block;
                 font-size: 0.75rem !important;  /* Decreased from 0.85rem */
-                white-space: nowrap;
+                white-space: normal;
+                padding: 0 1rem;
             }
             
             .testimonials-subtitle {
@@ -3808,9 +3840,9 @@
                 margin-top: -120px;
                 font-size: clamp(0.9075rem, 2.31vw, 1.485rem);
                 font-weight: 300;
-                white-space: nowrap;
+                white-space: normal;
                 max-width: 100%;
-                overflow: hidden;
+                padding: 0 0.75rem;
                 margin-bottom: 0;
                 animation: drift-mobile 8s linear infinite;
             }
@@ -4280,6 +4312,7 @@
                         <div id="gate-cc-empty" class="gate-cc-empty" hidden>No matches found</div>
                     </div>
                     <div id="gate-cc-error" class="gate-cc-error" hidden>Please select your country code.</div>
+                    <div id="gate-phone-error" class="gate-cc-error" hidden>Please enter a valid mobile number.</div>
                     <input type="hidden" name="Country Code" id="gate-cc-value">
                     <input type="hidden" name="Country" id="gate-cc-country">
                     <input type="hidden" name="Phone (Full)" id="gate-phone-full">
@@ -4344,7 +4377,7 @@
                 <span>November 26 &ndash; December 3, 2026</span>
             </div>
             <div class="hero-ctas">
-                <a href="#pricing" class="hero-cta-secondary">Reveal Sri Lanka to me!</a>
+                <a href="#pricing" class="hero-cta-secondary">Reveal</a>
             </div>
         </div>
     </section>
@@ -4361,47 +4394,43 @@
             <h2 class="section-title" style="font-weight: 700;">
                 WHY JOIN THIS RETREAT?
             </h2>
-            <p class="section-script" style="font-family: 'Montserrat', sans-serif; font-size: 1rem; font-weight: 400; text-align: justify; letter-spacing: 0.02em; line-height: 1.6; word-spacing: 0.1em; color: var(--warm-taupe);">Few places on earth pack as much staggering diversity into a single journey as Sri Lanka. In 8 days, explore UNESCO World Heritage sites, mist-covered Hill Country, pristine tropical beaches &amp; a unique approach to Yoga. We&rsquo;ve carefully curated this experience to go far beyond sightseeing &amp; yoga retreat.</p>
+            <p class="section-script" style="font-family: 'Montserrat', sans-serif; font-size: 1rem; font-weight: 400; text-align: justify; letter-spacing: 0.02em; line-height: 1.6; word-spacing: 0.1em; color: var(--warm-taupe);">Few places reveal so much in one journey. From ancient kingdoms &amp; misty tea hills to Ayurveda, luxury hotels &amp; the Indian Ocean, Sri Lanka unfolds one unforgettable experience after another.</p>
             <div class="feature-list">
                 <div class="feature-item">
-                    <span class="feature-heading">A founder-led, East-Meets-West yoga practice</span>
-                    <span class="feature-description">Signature yoga journeys personally designed by Lina Aoun</span>
+                    <span class="feature-heading">Founder-led East-meets-West Yoga</span>
+                    <span class="feature-description">Designed &amp; personally hosted by Lina Aoun.</span>
                 </div>
                 <div class="feature-item">
-                    <span class="feature-heading">Three award-winning stays. Three different worlds.</span>
-                    <span class="feature-description">Luxury hotels chosen to reveal a different face of Sri Lanka</span>
+                    <span class="feature-heading">Award-winning stays</span>
+                    <span class="feature-description">3 remarkable luxurious hotels. 3 different worlds.</span>
                 </div>
                 <div class="feature-item">
-                    <span class="feature-heading">160+ retreats by Yogi Nomads</span>
-                    <span class="feature-description">A proven retreat experience, thoughtfully refined over the years</span>
+                    <span class="feature-heading">160+ Yogi Nomads retreats</span>
+                    <span class="feature-description">This is refined through years of experience.</span>
                 </div>
                 <div class="feature-item">
-                    <span class="feature-heading">Ayurveda beyond the treatment room</span>
-                    <span class="feature-description">Immersive chapters to experience &amp; bring Ayurveda home</span>
+                    <span class="feature-heading">Ayurveda beyond treatments</span>
+                    <span class="feature-description">Understand it. Experience it. Take it home.</span>
                 </div>
                 <div class="feature-item">
-                    <span class="feature-heading">We&rsquo;ve done the filtering for you</span>
-                    <span class="feature-description">Every stop carefully selected&mdash;keeping only what&rsquo;s truly worth your time</span>
+                    <span class="feature-heading">We&rsquo;ve done the filtering</span>
+                    <span class="feature-description">Only the experiences truly worth your time.</span>
                 </div>
                 <div class="feature-item">
-                    <span class="feature-heading">A journey that feels effortless</span>
-                    <span class="feature-description">Private transfers, seamless logistics and every detail taken care of</span>
+                    <span class="feature-heading">Effortless from start to finish</span>
+                    <span class="feature-description">Seamless logistics. Exceptional hospitality.</span>
                 </div>
                 <div class="feature-item">
                     <span class="feature-heading">A group that feels easy</span>
-                    <span class="feature-description">Whether you come alone, with a partner or friends, you&rsquo;ll feel part of the journey</span>
+                    <span class="feature-description">Come solo or together&mdash;you&rsquo;ll belong.</span>
                 </div>
                 <div class="feature-item">
-                    <span class="feature-heading">A balance between discovery and downtime</span>
-                    <span class="feature-description">Curated experiences, meaningful free time &amp; space to enjoy the moment</span>
+                    <span class="feature-heading">Authentic, without compromise</span>
+                    <span class="feature-description">Real Sri Lanka. With the Exceptional comfort.</span>
                 </div>
                 <div class="feature-item">
-                    <span class="feature-heading">Authenticity without compromising comfort</span>
-                    <span class="feature-description">Meet the souls, landscapes &amp; traditions while enjoying exceptional comfort</span>
-                </div>
-                <div class="feature-item">
-                    <span class="feature-heading">Exclusive guest privileges (for full-payment guests)</span>
-                    <span class="feature-description">Unlock a selection of curated experiences and thoughtful surprises</span>
+                    <span class="feature-heading">Exclusive guest privileges</span>
+                    <span class="feature-description">Thoughtful surprises for full-payment guests.</span>
                 </div>
             </div>
         </div>
@@ -4410,9 +4439,8 @@
     <!-- Sample Day Section -->
     <section class="sample-day-section">
         <div class="sample-day-header">
-            <h2 class="section-title" style="font-weight: 600;">THE EXPERIENCE <span class="mobile-hide-dot-experience">· </span><span class="mobile-line-break"><br/></span><span class="mobile-day-paradise-dots"><span class="mobile-dot-before">· </span>THE MANY FACES OF SRI LANKA<span class="mobile-dot-after"> ·</span></span></h2>
-            <p class="section-script structured-flexible-text" style="font-family: 'Montserrat', sans-serif; font-size: 1.25rem; font-weight: 500; text-align: center; max-width: 800px; margin: 0 auto; letter-spacing: 0.02em; color: #D4B896;"><span class="structured-text">One journey. Seven faces revealed.</span></p>
-            <p class="section-script daily-rhythm-text" style="font-family: 'Montserrat', sans-serif; font-size: 1rem; font-weight: 400; text-align: justify; max-width: 800px; margin: 1rem auto 0 auto; letter-spacing: 0.02em; line-height: 1.6; color: var(--warm-taupe);">Each chapter of the retreat unfolds a completely new face of the Island. Every stop has been carefully chosen for its character, its people, and the story it tells. Yoga is the thread that connects every experience, allowing you to slow down, become present &amp; fully absorb the island as it unfolds.</p>
+            <h2 class="section-title" style="font-weight: 600;">THE EXPERIENCE <span class="mobile-hide-dot-experience">· </span><span class="mobile-line-break"><br/></span><span class="mobile-day-paradise-dots"><span class="mobile-dot-before">· </span>SEVEN FACES OF SRI LANKA<span class="mobile-dot-after"> ·</span></span></h2>
+            <p class="section-script daily-rhythm-text" style="font-family: 'Montserrat', sans-serif; font-size: 1rem; font-weight: 400; text-align: center; max-width: 800px; margin: 1rem auto 0 auto; letter-spacing: 0.02em; line-height: 1.6; color: var(--warm-taupe);">Each chapter of the retreat unfolds a completely new face of the Island. Every stop has been carefully chosen for its character, its people, and the story it tells. Yoga is the thread that connects them all.</p>
         </div>
         <div class="sample-day-strips">
             <div class="sample-day-strip sample-day-strip--banner">
@@ -4507,7 +4535,7 @@
     <!-- Villas Section -->
     <section class="villas" id="villas">
         <div class="villas-header">
-            <h2 class="section-title villas-main-title" style="font-weight: 700; color: white;"><span class="desktop-villas-title">Your Sanctuary <span class="mobile-hide-dot-villas">· </span>Curated Five-star Hospitality</span><span class="mobile-villas-title">Your Sanctuary<br/>·Curated Five-star Hospitality·</span></h2>
+            <h2 class="section-title villas-main-title" style="font-weight: 700; color: white;"><span class="desktop-villas-title">Your Sanctuary <span class="mobile-hide-dot-villas">· </span>Curated 5* Hospitality</span><span class="mobile-villas-title">Your Sanctuary<br/>·Curated 5* Hospitality·</span></h2>
             <div style="margin-top: 1rem; text-align: center;">
                 <p class="villas-resort-subtitle" style="font-family: 'Montserrat', sans-serif; font-size: 1.15rem; font-weight: 500; color: #D4B896; letter-spacing: 0.02em; line-height: 1.6; word-spacing: 0.1em; text-align: center; max-width: 800px; margin: 0 auto;">
                     <span class="desktop-resort-subtitle">Hotels &amp; Resorts Internationally recognized. Carefully Chosen.</span>
@@ -4524,7 +4552,7 @@
                     <div class="villa-img">
                         <img src="IMG_7409.webp" alt="Aliya Resort &amp; Spa" loading="lazy"/>
                     </div>
-                    <p class="villa-caption">Aliya Resort &amp; Spa<span class="villa-award">Tripadvisor Best of the Best</span></p>
+                    <p class="villa-caption">Aliya Resort &amp; Spa<span class="villa-award">Cond&eacute; Nast Traveler Nomination</span></p>
                 </div>
                 <div class="villa-col">
                     <div class="villa-img">
@@ -4536,11 +4564,38 @@
                     <div class="villa-img">
                         <img src="IMG_7413.webp" alt="Anantara Peace Haven" loading="lazy"/>
                     </div>
-                    <p class="villa-caption">Anantara Peace Haven<span class="villa-award">Cond&eacute; Nast Traveler Readers&rsquo; Choice</span></p>
+                    <p class="villa-caption">Anantara Peace Haven<span class="villa-award">Sri Lanka&rsquo;s Leading Luxury Resort 2025 by World Travel Awards</span></p>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- A Distinct Yoga Journey -->
+    <div class="gallery-section distinct-yoga-section" style="height: 60vh; min-height: 500px; background: white; display: flex; align-items: center; justify-content: center;">
+        <div class="gallery-text distinct-yoga-content" style="text-align: center; max-width: 1200px; padding-left: 4rem; padding-right: 4rem; width: 100%;">
+            <p class="script" style="color: var(--deep-teal);">A Distinct Yoga. West Meets East.</p>
+            <p class="yoga-journey-subtitle" style="font-family: 'Montserrat', sans-serif; font-size: 1.15rem; font-weight: 500; text-align: center; letter-spacing: 0.02em; line-height: 1.6; word-spacing: 0.1em; color: #D4B896; margin-top: 0.75rem;"><span class="desktop-yoga-subtitle">Two perspectives. One deeper Yogic Experience.</span><span class="mobile-yoga-subtitle">Two perspectives.<br/>One deeper Yogic Experience.</span></p>
+            <div style="margin-top: 1.75rem;">
+                <p class="desktop-yoga-paragraph" style="font-family: 'Montserrat', sans-serif; font-size: 1rem; font-weight: 400; text-align: center; letter-spacing: 0.02em; line-height: 1.6; word-spacing: 0.1em; color: var(--deep-teal); margin: 0 auto 1rem auto; max-width: 900px;">Move through Yogi Nomads&rsquo; signature contemporary yoga while discovering Sri Lanka&rsquo;s living traditions through meditation, Buddhist philosophy and local teachers.</p>
+                <p class="mobile-yoga-paragraph" style="font-family: 'Montserrat', sans-serif; font-size: 1rem; font-weight: 400; text-align: justify; letter-spacing: 0.02em; line-height: 1.6; word-spacing: 0.1em; color: var(--deep-teal); margin: 0 auto 1rem auto; max-width: 100%; display: none;">Move through Yogi Nomads&rsquo; signature contemporary yoga while discovering Sri Lanka&rsquo;s living traditions through meditation, Buddhist philosophy and local teachers.</p>
+                <p style="font-family: 'Montserrat', sans-serif; font-size: 1rem; font-weight: 600; text-align: center; letter-spacing: 0.02em; line-height: 1.6; word-spacing: 0.1em; color: var(--deep-teal); margin-bottom: 0; white-space: nowrap;">Welcoming to every level. No experience required.</p>
+            </div>
+        </div>
+    </div>
+
+        <!-- Asymmetric duo -->
+        <div class="gallery-section gallery-asymmetric">
+            <div class="gallery-asymmetric-img">
+                <video controls loop playsinline preload="metadata" id="video-1" poster="IMG_0077.JPG">
+                    <source src="IMG_9643.MP4" type="video/mp4">
+                </video>
+            </div>
+            <div class="gallery-asymmetric-img">
+                <video controls loop playsinline preload="metadata" id="video-2" poster="IMG_0078.JPG" class="poster-center-bottom">
+                    <source src="IMG_9714.MP4" type="video/mp4">
+                </video>
+            </div>
+        </div>
 
     <!-- Founder Section -->
     <section class="founder" id="founder">
@@ -4663,33 +4718,6 @@
         </div>
     </section>
 
-    <!-- A Distinct Yoga Journey -->
-    <div class="gallery-section distinct-yoga-section" style="height: 60vh; min-height: 500px; background: white; display: flex; align-items: center; justify-content: center;">
-        <div class="gallery-text distinct-yoga-content" style="text-align: center; max-width: 1200px; padding-left: 4rem; padding-right: 4rem; width: 100%;">
-            <p class="script" style="color: var(--deep-teal);">A Distinct Yoga Journey. West Meets East.</p>
-            <p class="yoga-journey-subtitle" style="font-family: 'Montserrat', sans-serif; font-size: 1.15rem; font-weight: 500; text-align: center; letter-spacing: 0.02em; line-height: 1.6; word-spacing: 0.1em; color: #D4B896; margin-top: 0.75rem;"><span class="desktop-yoga-subtitle">Two perspectives. One deeper Yogic Experience.</span><span class="mobile-yoga-subtitle">Two perspectives.<br/>One deeper Yogic Experience.</span></p>
-            <div style="margin-top: 1.75rem;">
-                <p class="desktop-yoga-paragraph" style="font-family: 'Montserrat', sans-serif; font-size: 1rem; font-weight: 400; text-align: center; letter-spacing: 0.02em; line-height: 1.6; word-spacing: 0.1em; color: var(--deep-teal); margin: 0 auto 1rem auto; max-width: 900px;">Practice Yogi Nomads&rsquo; signature westernized modern classes, then discover traditional eastern yoga through the eyes of local teachers, Buddhist philosophy, meditation with a monk, and moments of stillness rooted in Sri Lanka&rsquo;s living heritage.</p>
-                <p class="mobile-yoga-paragraph" style="font-family: 'Montserrat', sans-serif; font-size: 1rem; font-weight: 400; text-align: justify; letter-spacing: 0.02em; line-height: 1.6; word-spacing: 0.1em; color: var(--deep-teal); margin: 0 auto 1rem auto; max-width: 100%; display: none;">Practice Yogi Nomads&rsquo; signature westernized modern classes, then discover traditional eastern yoga through the eyes of local teachers, Buddhist philosophy, meditation with a monk, and moments of stillness rooted in Sri Lanka&rsquo;s living heritage.</p>
-                <p style="font-family: 'Montserrat', sans-serif; font-size: 1rem; font-weight: 600; text-align: center; letter-spacing: 0.02em; line-height: 1.6; word-spacing: 0.1em; color: var(--deep-teal); margin-bottom: 0; white-space: nowrap;">Adaptable for all levels.</p>
-            </div>
-        </div>
-    </div>
-
-        <!-- Asymmetric duo -->
-        <div class="gallery-section gallery-asymmetric">
-            <div class="gallery-asymmetric-img">
-                <video controls loop playsinline preload="metadata" id="video-1" poster="IMG_0077.JPG">
-                    <source src="IMG_9643.MP4" type="video/mp4">
-                </video>
-            </div>
-            <div class="gallery-asymmetric-img">
-                <video controls loop playsinline preload="metadata" id="video-2" poster="IMG_0078.JPG" class="poster-center-bottom">
-                    <source src="IMG_9714.MP4" type="video/mp4">
-                </video>
-            </div>
-        </div>
-
     <!-- ============================================
          VISUAL GALLERY - Editorial Dream Sequence
          ============================================ -->
@@ -4701,9 +4729,17 @@
             <img src="Mobile-tribe.jpg" alt="Lively evenings" loading="lazy" class="mobile-lively-evenings-img"/>
             <div class="gallery-overlay" style="align-items: flex-start; padding-top: 4rem;">
                 <div class="gallery-text">
-                    <p class="script">LIVELY EVENINGS AWAIT</p>
-                    <p class="sunset-text" style="font-family: 'Montserrat', sans-serif; font-size: 1.15rem; font-weight: 500; text-align: center; letter-spacing: 0.02em; line-height: 1.6; word-spacing: 0.1em; color: #D4B896; margin-top: 0.75rem; white-space: nowrap;">Created With Your Feeling in Mind</p>
-                    <p style="font-family: 'Montserrat', sans-serif; font-size: 1rem; font-weight: 400; text-align: center; letter-spacing: 0.02em; line-height: 1.7; word-spacing: 0.1em; color: white; margin: 1rem auto 0 auto; max-width: 760px;">Behind every stop is an intention. Behind every experience is a reason. We carefully curate each retreat around how we want you to feel&mdash;not just what we want you to see. That&rsquo;s why every Yogi Nomads journey feels warm, personal, and unlike any other.</p>
+                    <p class="script">WHO THIS JOURNEY IS FOR</p>
+                    <p class="sunset-text" style="font-family: 'Montserrat', sans-serif; font-size: 1.05rem; font-weight: 500; text-align: center; letter-spacing: 0.02em; line-height: 1.6; word-spacing: 0.1em; color: #D4B896; margin: 0.75rem auto 0 auto; max-width: 760px; white-space: normal;">Thoughtfully designed from beginning to end, every destination, stay and experience has been chosen with purpose. The result is a journey that feels warm, personal and unlike any other.</p>
+                    <ul style="list-style: none; padding: 0 1rem; margin: 1.25rem auto 0 auto; max-width: 640px; font-family: 'Montserrat', sans-serif; font-size: 0.95rem; font-weight: 400; letter-spacing: 0.02em; line-height: 1.9; color: white; text-align: left;">
+                        <li>&#10038; Want to experience the real Sri Lanka&mdash;beautifully, not hurriedly.</li>
+                        <li>&#10038; Choose places with character over places everyone has already seen.</li>
+                        <li>&#10038; Appreciate exceptional stays with character, soul and a sense of place.</li>
+                        <li>&#10038; Believe yoga belongs in life&mdash;not just on the mat.</li>
+                        <li>&#10038; Want to experience Sri Lanka in all its faces&mdash;from ancient kingdoms and tea hills to wildlife, coastline and local culture.</li>
+                        <li>&#10038; Seek genuine human connection and a diverse community.</li>
+                        <li>&#10038; Appreciate journeys where every detail has already been thoughtfully considered.</li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -4716,7 +4752,7 @@
         <div class="inclusions-overlay"></div>
         <div class="inclusions-content">
             <div class="inclusions-header" style="margin-top: 0.5rem;">
-                <h2 class="section-title" style="font-weight: 600;">THE PACKAGE</h2>
+                <h2 class="section-title" style="font-weight: 600;">YOUR INVESTMENT</h2>
             </div>
             <div class="inclusions-grid">
                 <div class="inclusions-col">
@@ -4726,7 +4762,7 @@
                         <svg class="check" viewBox="0 0 24 24" fill="none" stroke-width="2">
                             <path d="M20 6L9 17l-5-5"/>
                         </svg>
-                        <span style="word-spacing: -0.1em;">7 nights in a shared room across 3 handpicked award-winning luxury hotels</span>
+                        <span style="word-spacing: -0.1em;">7 nights across 3 handpicked award-winning hotels</span>
                     </div>
                     <div class="inclusion-item">
                         <svg class="check" viewBox="0 0 24 24" fill="none" stroke-width="2">
@@ -4776,13 +4812,19 @@
                         <svg class="check" viewBox="0 0 24 24" fill="none" stroke-width="2">
                             <path d="M20 6L9 17l-5-5"/>
                         </svg>
-                        Personal Dosha Consultation
+                        Personal Dosha &amp; Doctor Consultation
                     </div>
                     <div class="inclusion-item">
                         <svg class="check" viewBox="0 0 24 24" fill="none" stroke-width="2">
                             <path d="M20 6L9 17l-5-5"/>
                         </svg>
-                        Private Ayurvedic Signature Treatment
+                        Herbal Dispensary Experience
+                    </div>
+                    <div class="inclusion-item">
+                        <svg class="check" viewBox="0 0 24 24" fill="none" stroke-width="2">
+                            <path d="M20 6L9 17l-5-5"/>
+                        </svg>
+                        Ayurvedic Signature Treatment
                     </div>
                     <p class="inclusion-category">Signature Sri Lankan Experiences</p>
                     <div class="inclusion-item">
@@ -4790,6 +4832,12 @@
                             <path d="M20 6L9 17l-5-5"/>
                         </svg>
                         Traditional village experience
+                    </div>
+                    <div class="inclusion-item">
+                        <svg class="check" viewBox="0 0 24 24" fill="none" stroke-width="2">
+                            <path d="M20 6L9 17l-5-5"/>
+                        </svg>
+                        Pottery and paper recycling workshops
                     </div>
                     <div class="inclusion-item">
                         <svg class="check" viewBox="0 0 24 24" fill="none" stroke-width="2">
@@ -4807,19 +4855,19 @@
                         <svg class="check" viewBox="0 0 24 24" fill="none" stroke-width="2">
                             <path d="M20 6L9 17l-5-5"/>
                         </svg>
-                        Traditional Kandyan dance performance
+                        Kandyan dance performance
                     </div>
                     <div class="inclusion-item">
                         <svg class="check" viewBox="0 0 24 24" fill="none" stroke-width="2">
                             <path d="M20 6L9 17l-5-5"/>
                         </svg>
-                        Tea plucking experience
+                        Tea plucking experience &amp; Factory tour
                     </div>
                     <div class="inclusion-item">
                         <svg class="check" viewBox="0 0 24 24" fill="none" stroke-width="2">
                             <path d="M20 6L9 17l-5-5"/>
                         </svg>
-                        Tea factory tour &amp; Ceylon tea tasting
+                        The Tea Quotheque
                     </div>
                     <div class="inclusion-item">
                         <svg class="check" viewBox="0 0 24 24" fill="none" stroke-width="2">
@@ -4827,31 +4875,43 @@
                         </svg>
                         Ella &amp; Galle town explorations
                     </div>
-                    <p class="inclusion-category">Cultural Landmarks &amp; Entrance Fees</p>
                     <div class="inclusion-item">
                         <svg class="check" viewBox="0 0 24 24" fill="none" stroke-width="2">
                             <path d="M20 6L9 17l-5-5"/>
                         </svg>
-                        All entrance fees to cultural sites and experiences (excluding optional activities)
+                        Horticulture Green Thumb journey
+                    </div>
+                    <p class="inclusion-category">Cultural Landmarks</p>
+                    <div class="inclusion-item">
+                        <svg class="check" viewBox="0 0 24 24" fill="none" stroke-width="2">
+                            <path d="M20 6L9 17l-5-5"/>
+                        </svg>
+                        All entrance fees to cultural sites (excluding optional activities)
                     </div>
                     <p class="inclusion-category">Leisure &amp; Resort Experiences</p>
                     <div class="inclusion-item">
                         <svg class="check" viewBox="0 0 24 24" fill="none" stroke-width="2">
                             <path d="M20 6L9 17l-5-5"/>
                         </svg>
-                        Unlimited access to resort pools, beaches &amp; wellness facilities
+                        Ocean Star-lit Cinema
                     </div>
                     <div class="inclusion-item">
                         <svg class="check" viewBox="0 0 24 24" fill="none" stroke-width="2">
                             <path d="M20 6L9 17l-5-5"/>
                         </svg>
-                        Private airport transfers (only if flights are booked with Yogi Nomads)
+                        Unlimited access beaches &amp; wellness facilities
                     </div>
                     <div class="inclusion-item">
                         <svg class="check" viewBox="0 0 24 24" fill="none" stroke-width="2">
                             <path d="M20 6L9 17l-5-5"/>
                         </svg>
-                        All ground transportation throughout the journey
+                        Private airport transfers (when flights booked with Yogi Nomads)
+                    </div>
+                    <div class="inclusion-item">
+                        <svg class="check" viewBox="0 0 24 24" fill="none" stroke-width="2">
+                            <path d="M20 6L9 17l-5-5"/>
+                        </svg>
+                        All ground transportation
                     </div>
                 </div>
                 <div class="inclusions-col not-included">
@@ -4866,13 +4926,13 @@
                         <svg class="x" viewBox="0 0 24 24" fill="none" stroke-width="2">
                             <path d="M12 5v14M5 12h14"/>
                         </svg>
-                        Travel insurance
+                        Visas &amp; Travel insurance
                     </div>
                     <div class="inclusion-item">
                         <svg class="x" viewBox="0 0 24 24" fill="none" stroke-width="2">
                             <path d="M12 5v14M5 12h14"/>
                         </svg>
-                        Optional Excursions
+                        Optional Excursions*
                     </div>
                     <div class="inclusion-item">
                         <svg class="x" viewBox="0 0 24 24" fill="none" stroke-width="2">
@@ -4881,7 +4941,7 @@
                         Personal expenses
                     </div>
                     <p class="inclusions-note">
-                        Flight arrangements are secured by Yogi Nomads ensuring a smooth journey from departure to arrival and appropriate transfers.
+                        Flight arrangements secured by Yogi Nomads ensuring a smooth journey &amp; appropriate transfers.
                     </p>
                 </div>
             </div>
@@ -4931,8 +4991,8 @@
 
                 <!-- Footer Notes -->
                 <div class="pricing-footer">
-                    <p>This price is on shared room basis (2 persons / room)</p>
-                    <p>Single options are available.</p>
+                    <p>Rate on shared room basis (2 persons / room)</p>
+                    <p>Single options available.</p>
                     <p>Solo travelers welcome — we'll pair you with a roommate when possible.</p>
 
                     <!-- Trust Badges -->
@@ -5028,10 +5088,10 @@
     <!-- Final CTA Duplicate -->
     <section class="final-cta final-cta-ready-embark" style="background-color: #FDF8F3; min-height: auto; padding: 3rem 1rem;">
         <div class="final-cta-content">
-            <h2 class="section-title" style="font-weight: 600; color: var(--deep-teal);">More than Yoga &amp; a Retreat. A unique Story you&rsquo;ll live.</h2>
+            <h2 class="section-title" style="font-weight: 600; color: var(--deep-teal);">Beyond Yoga. Beyond Travel. This is Sri Lanka, Revealed.</h2>
             <div class="final-cta-buttons" style="margin-top: 1.5rem; margin-bottom: 1rem;">
                 <a href="#pricing" class="final-cta-btn final-cta-btn-primary" style="background: var(--deep-teal); color: white;">
-                    BOOK YOUR PLACE
+                    RESERVE YOUR PLACE
                 </a>
             </div>
             <p class="final-cta-text" style="margin-bottom: 0.5rem; color: var(--deep-teal);">
@@ -5087,14 +5147,14 @@
                     <path d="M3 2.5a2.5 2.5 0 0 1 5 0 2.5 2.5 0 0 1 5 0v.006c0 .07 0 .27-.038.494H15a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1v7.5a1.5 1.5 0 0 1-1.5 1.5h-11A1.5 1.5 0 0 1 1 14.5V7a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h2.038A2.968 2.968 0 0 1 3 2.506V2.5zm1.068.5H7v-.5a1.5 1.5 0 1 0-3 0c0 .085.002.274.045.43a.522.522 0 0 0 .023.07zM9 3h2.932a.56.56 0 0 0 .023-.07c.043-.156.045-.345.045-.43a1.5 1.5 0 0 0-3 0V3zM1 4v2h6V4H1zm8 0v2h6V4H9zm5 3H9v8h4.5a.5.5 0 0 0 .5-.5V7zm-7 8V7H2v7.5a.5.5 0 0 0 .5.5H7z"/>
                 </svg>
             </div>
-            <h3 class="section-title" style="text-align: center; margin-bottom: 1.25rem; color: var(--deep-teal); font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: clamp(1.4rem, 3.2vw, 2rem); line-height: 1.3;">Pay in Full upon Booking &amp; unlock Exclusive Privileges</h3>
-            <ul style="list-style: none; padding: 0; margin: 0 0 1.25rem 0; color: var(--deep-teal); font-family: 'Montserrat', sans-serif; font-weight: 400; font-size: 0.95rem; line-height: 1.8; text-align: left;">
-                <li>• Complimentary Signature Ayurvedic Treatment</li>
-                <li>• Exclusive Access to N&#332;MADS &lsquo;Sri Lanka Capsule Clothing Collection&rsquo;</li>
-                <li>• Sri Lanka Style Guide &amp; Packing Guide by N&#332;MADS</li>
+            <h3 class="section-title" style="text-align: center; margin-bottom: 1rem; color: var(--deep-teal); font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: clamp(1.15rem, 2.4vw, 1.55rem); line-height: 1.35; letter-spacing: 0.01em;">Pay in Full upon Booking &amp; unlock Exclusive Privileges</h3>
+            <ul style="list-style: none; padding: 0; margin: 0 0 1rem 0; color: var(--deep-teal); font-family: 'Montserrat', sans-serif; font-weight: 400; font-size: 0.85rem; line-height: 1.75; text-align: left;">
+                <li>• Complimentary Ayurvedic Treatment</li>
+                <li>• Exclusive Access to N&#332;MADS Wardrobe Collection &lsquo;Sri Lanka Capsule&rsquo;</li>
+                <li>• Style &amp; Packing Guide by N&#332;MADS</li>
                 <li>• Exclusive Pre-Retreat Yoga Access</li>
             </ul>
-            <p style="color: var(--deep-teal); margin-bottom: 1.5rem; font-size: 1rem; line-height: 1.6; font-family: 'Montserrat', sans-serif; font-weight: 700;">
+            <p style="color: var(--deep-teal); margin-bottom: 1.25rem; font-size: 0.85rem; line-height: 1.6; font-family: 'Montserrat', sans-serif; font-weight: 600;">
                 Available only for a limited number of participants
             </p>
             <a href="#pricing"
@@ -6104,11 +6164,23 @@
                         if (ccTrigger) ccTrigger.focus();
                         return;
                     }
-                    // Compose the full phone (country code + number) for Formspree
+                    // Validate the phone number: digits/spacing chars only, 7-15 digits
                     const gatePhoneEl = document.getElementById('gate-phone');
+                    const phoneErr = document.getElementById('gate-phone-error');
+                    const phoneRaw = gatePhoneEl ? gatePhoneEl.value.trim() : '';
+                    const phoneDigits = phoneRaw.replace(/\D/g, '');
+                    const phoneOk = /^[0-9\s\-().+]+$/.test(phoneRaw) && phoneDigits.length >= 7 && phoneDigits.length <= 15;
+                    if (!phoneOk) {
+                        if (phoneErr) phoneErr.hidden = false;
+                        if (gatePhoneEl) gatePhoneEl.focus();
+                        return;
+                    }
+                    if (phoneErr) phoneErr.hidden = true;
+
+                    // Compose the full phone (country code + number) for Formspree
                     const gatePhoneFull = document.getElementById('gate-phone-full');
                     if (gatePhoneEl && gatePhoneFull) {
-                        gatePhoneFull.value = ccVal + ' ' + gatePhoneEl.value.trim();
+                        gatePhoneFull.value = ccVal + ' ' + phoneRaw;
                     }
 
                     const submitBtn = document.getElementById('gate-submit-btn');
