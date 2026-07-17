@@ -335,6 +335,20 @@
             background: rgba(26,95,94,0.02);
         }
 
+        .product-list-thumb {
+            width: 76px;
+            height: 76px;
+            border-radius: 10px;
+            overflow: hidden;
+            flex-shrink: 0;
+        }
+
+        .product-list-thumb img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
         .product-list-info {
             flex: 1;
             min-width: 0;
@@ -724,7 +738,7 @@
     <!-- Hero Section -->
     <section class="addons-hero">
         <div class="addons-hero-bg">
-            <img src="island.jpeg" alt="Sri Lanka aerial view" loading="eager"/>
+            <img src="bgnd.jpeg" alt="Sri Lanka retreat" loading="eager"/>
         </div>
         <div class="addons-hero-overlay"></div>
         <div class="addons-hero-content">
@@ -759,7 +773,7 @@
                 <!-- Single Occupancy -->
                 <div class="product-card" data-product="single-occupancy" data-price="895">
                     <div class="product-image">
-                        <img src="IMG_7409.webp" alt="Private hotel room" loading="lazy"/>
+                        <img src="single.jpeg" alt="Private single-occupancy room" loading="lazy"/>
                     </div>
                     <div class="product-content">
                         <h3 class="product-name">Upgrade to Single Occupancy</h3>
@@ -813,6 +827,7 @@
                 </div>
 
                 <div class="product-list-item" data-product="half-board" data-price="240">
+                    <div class="product-list-thumb"><img src="halfboard.jpeg" alt="Half board dining" loading="lazy"/></div>
                     <div class="product-list-info">
                         <h4 class="product-list-name">Upgrade to Half Board</h4>
                         <p class="product-list-detail">5 nights at the first 2 hotels with dinners included</p>
@@ -847,6 +862,7 @@ Advance confirmation required. Please send your confirmed flight details via ema
 
             <div class="products-list">
                 <div class="product-list-item" data-product="transfer-oneway" data-price="150">
+                    <div class="product-list-thumb"><img src="transfer.jpeg" alt="Private airport transfer" loading="lazy"/></div>
                     <div class="product-list-info">
                         <h4 class="product-list-name">One Way Transfer</h4>
                         <p class="product-list-detail">Airport pick-up or drop-off, timed to your flight</p>
@@ -862,6 +878,7 @@ Advance confirmation required. Please send your confirmed flight details via ema
                 </div>
 
                 <div class="product-list-item" data-product="transfer-roundtrip" data-price="300">
+                    <div class="product-list-thumb"><img src="transfer.jpeg" alt="Private airport transfer" loading="lazy"/></div>
                     <div class="product-list-info">
                         <h4 class="product-list-name">Round Trip Transfer</h4>
                         <p class="product-list-detail">Airport pick-up and drop-off, timed to your flights</p>
@@ -1126,6 +1143,7 @@ Special retreat discounted rates apply exclusively to pre-booked experiences arr
 
             <div class="products-list">
                 <div class="product-list-item" data-product="surf-lesson" data-price="105">
+                    <div class="product-list-thumb"><img src="surf.jpeg" alt="Surfing the Indian Ocean" loading="lazy"/></div>
                     <div class="product-list-info">
                         <h4 class="product-list-name">Surf the Indian Ocean</h4>
                         <p class="product-list-detail">Experience the thrill of riding your first wave with a beginner-friendly surf lesson. Includes surfboards, sunscreen, rashguards, towels, water &amp; expert instruction.<br>1.5 hrs &mdash; ideal for first-timers</p>
@@ -1141,6 +1159,7 @@ Special retreat discounted rates apply exclusively to pre-booked experiences arr
                 </div>
 
                 <div class="product-list-item" data-product="whale-watching" data-price="0">
+                    <div class="product-list-thumb"><img src="whales.jpeg" alt="Whale watching off the southern coast" loading="lazy"/></div>
                     <div class="product-list-info">
                         <h4 class="product-list-name">Whale Watching</h4>
                         <p class="product-list-detail">Set out on the Indian Ocean in search of blue whales, sperm whales and playful dolphin pods along Sri Lanka&rsquo;s southern coast &mdash; one of the best whale-watching regions on earth.<br>Approx. 3&ndash;4 hrs &mdash; early morning departure, seasonal</p>
