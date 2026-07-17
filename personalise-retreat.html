@@ -706,11 +706,12 @@
                 padding-right: clamp(1.5rem, 3vw, 3rem);
             }
             .addons-hero-title {
-                font-size: clamp(2.2rem, 4vw, 3.6rem);
+                font-size: clamp(2rem, 3.2vw, 2.9rem);
+                white-space: nowrap;
             }
             .addons-hero-subtitle {
-                font-size: clamp(0.95rem, 1vw + 0.4rem, 1.15rem);
-                max-width: min(800px, 80vw);
+                font-size: clamp(0.9rem, 0.9vw + 0.35rem, 1.08rem);
+                max-width: min(960px, 94vw);
             }
             .category-title {
                 font-size: clamp(1.4rem, 2.2vw, 2rem);
@@ -731,6 +732,29 @@
                 max-width: 1300px;
             }
         }
+
+        .spa-hotel-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.35rem;
+            font-weight: 600;
+            color: var(--deep-teal);
+            margin: 1.5rem 0 0.6rem;
+        }
+        .spa-table-wrap { overflow-x: auto; border-radius: 12px; box-shadow: 0 2px 10px rgba(0,0,0,0.04); background: white; }
+        .spa-table { width: 100%; border-collapse: collapse; font-family: 'Montserrat', sans-serif; }
+        .spa-table thead th {
+            text-align: left; font-size: 0.7rem; letter-spacing: 0.05em; text-transform: uppercase;
+            color: var(--warm-taupe); font-weight: 600; padding: 0.7rem 1rem; border-bottom: 1px solid rgba(0,0,0,0.08);
+            background: rgba(26,95,94,0.03);
+        }
+        .spa-table thead th:nth-child(2) { white-space: nowrap; }
+        .spa-table thead th:last-child { text-align: right; white-space: nowrap; }
+        .spa-table tbody td { padding: 0.75rem 1rem; font-size: 0.85rem; color: #3a3a3a; border-bottom: 1px solid rgba(0,0,0,0.05); vertical-align: top; }
+        .spa-table tbody td:nth-child(2) { white-space: nowrap; color: var(--warm-taupe); }
+        .spa-table tbody td:last-child { text-align: right; white-space: nowrap; font-weight: 600; color: var(--deep-teal); }
+        .spa-table tbody tr:last-child td { border-bottom: none; }
+        .spa-note { font-family: 'Montserrat', sans-serif; font-size: 0.8rem; color: var(--warm-taupe); margin-top: 1rem; font-style: italic; }
+        .exp-star { color: #C08A3E; font-weight: 700; }
     </style>
 </head>
 <body>
@@ -745,7 +769,7 @@
             <img src="Beige-and-Blue.png" alt="Yogi Nomads" class="addons-hero-logo"/>
             <h1 class="addons-hero-title">PERSONALIZE YOUR RETREAT</h1>
             <p class="addons-hero-subtitle">
-                Now that your place on the retreat is secured, you can tailor your experience with carefully selected upgrades, treatments, and experiences. All selections are optional and subject to availability.
+                Now that your place on the retreat is secured, you can tailor your experience with carefully selected upgrades, treatments and experiences. All selections are optional and subject to availability.
             </p>
         </div>
     </section>
@@ -769,7 +793,7 @@
                 <p class="category-subtitle">If you wish to add extra nights, please share your flight details with us via email or WhatsApp so we can coordinate your arrival, check-in and check-out smoothly.</p>
             </div>
 
-            <div class="products-grid single-col">
+            <div class="products-grid">
                 <!-- Single Occupancy -->
                 <div class="product-card" data-product="single-occupancy" data-price="895">
                     <div class="product-image">
@@ -785,6 +809,28 @@
                         <div class="product-footer">
                             <span class="product-detail">• Limited availability</span>
                             <button class="checkbox-btn" onclick="toggleProduct(this, 'single-occupancy', 895)">
+                                <svg viewBox="0 0 24 24" fill="none" stroke-width="3">
+                                    <path d="M5 13l4 4L19 7"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Half Board -->
+                <div class="product-card" data-product="half-board" data-price="240">
+                    <div class="product-image">
+                        <img src="halfboard.jpeg" alt="Half board dining" loading="lazy"/>
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-name">Upgrade to Half Board</h3>
+                        <p class="product-description">Enjoy 5 nights at the first 2 hotels with dinners included.</p>
+                        <div class="product-pricing">
+                            <span class="product-price">USD 240</span>
+                            <span class="product-price-note">for 5 nights</span>
+                        </div>
+                        <div class="product-footer">
+                            <span class="product-detail">&bull; Taxes &amp; service charges included</span>
+                            <button class="checkbox-btn" onclick="toggleProduct(this, 'half-board', 240)">
                                 <svg viewBox="0 0 24 24" fill="none" stroke-width="3">
                                     <path d="M5 13l4 4L19 7"/>
                                 </svg>
@@ -826,24 +872,6 @@
                     </div>
                 </div>
 
-                <div class="product-list-item" data-product="half-board" data-price="240">
-                    <div class="product-list-thumb"><img src="halfboard.jpeg" alt="Half board dining" loading="lazy"/></div>
-                    <div class="product-list-info">
-                        <h4 class="product-list-name">Upgrade to Half Board</h4>
-                        <p class="product-list-detail">5 nights at the first 2 hotels with dinners included</p>
-                    </div>
-                    <div class="product-list-right">
-                        <div class="product-list-pricing">
-                            <span class="product-list-price">USD 240</span>
-                            <span class="product-list-original" style="text-decoration: none;">for 5 nights</span>
-                        </div>
-                        <button class="checkbox-btn" onclick="toggleProduct(this, 'half-board', 240)">
-                            <svg viewBox="0 0 24 24" fill="none" stroke-width="3">
-                                <path d="M5 13l4 4L19 7"/>
-                            </svg>
-                        </button>
-                    </div>
-                </div>
                 <p style="font-family: 'Montserrat', sans-serif; font-size: 0.75rem; color: var(--warm-taupe); margin-top: 0.5rem; margin-left: 1.25rem;">Taxes & service charges included</p>
             </div>
         </section>
@@ -865,7 +893,7 @@ Advance confirmation required. Please send your confirmed flight details via ema
                     <div class="product-list-thumb"><img src="transfer.jpeg" alt="Private airport transfer" loading="lazy"/></div>
                     <div class="product-list-info">
                         <h4 class="product-list-name">One Way Transfer</h4>
-                        <p class="product-list-detail">Airport pick-up or drop-off, timed to your flight</p>
+                        <p class="product-list-detail">Airport pick-up or drop-off, timed to your flight &mdash; from / to Bandaranaike International Airport (CMB)</p>
                     </div>
                     <div class="product-list-right">
                         <span class="product-list-price">+USD 150</span>
@@ -881,7 +909,7 @@ Advance confirmation required. Please send your confirmed flight details via ema
                     <div class="product-list-thumb"><img src="transfer.jpeg" alt="Private airport transfer" loading="lazy"/></div>
                     <div class="product-list-info">
                         <h4 class="product-list-name">Round Trip Transfer</h4>
-                        <p class="product-list-detail">Airport pick-up and drop-off, timed to your flights</p>
+                        <p class="product-list-detail">Airport pick-up and drop-off, timed to your flights &mdash; from and to Bandaranaike International Airport (CMB)</p>
                     </div>
                     <div class="product-list-right">
                         <span class="product-list-price">+USD 300</span>
@@ -892,7 +920,6 @@ Advance confirmation required. Please send your confirmed flight details via ema
                         </button>
                     </div>
                 </div>
-                <p style="font-family: 'Montserrat', sans-serif; font-size: 0.75rem; color: var(--warm-taupe); margin-top: 0.5rem; margin-left: 1.25rem;">Advance confirmation required. Transfer service at an additional cost.</p>
             </div>
         </section>
 
@@ -904,156 +931,40 @@ Advance confirmation required. Please send your confirmed flight details via ema
         <section class="addons-category">
             <div class="category-header">
                 <h2 class="category-title">SPA &amp; AYURVEDIC EXPERIENCES</h2>
-                <p class="category-subtitle"><b>Availability is limited. Advance booking recommended.<br>
-Special retreat discounted rates apply exclusively to pre-booked experiences arranged before arrival. Bookings made directly at the resort will be charged at the hotel&rsquo;s standard published full rate.</b></p>
+                <p class="category-subtitle">Special retreat discounted rates apply exclusively to pre-booked experiences arranged before arrival. Bookings made directly at the resort will be charged at the hotel&rsquo;s standard published full rate.</p>
             </div>
 
-            <div class="products-list">
-                <div class="product-list-item" data-product="ayur-massage-bath" data-price="40">
-                    <div class="product-list-info">
-                        <h4 class="product-list-name">Herbal Oil Whole Body Massage &amp; Herbal Bath or Steam Bath</h4>
-                        <p class="product-list-detail">USD 35 per person for groups of 20 or more</p>
-                    </div>
-                    <div class="product-list-right">
-                        <div class="product-list-pricing">
-                            <span class="product-list-price">USD 40</span>
-                            <span class="product-list-original">$55</span>
-                        </div>
-                        <div class="quantity-counter">
-                            <button class="quantity-btn" onclick="updateQuantity(this, -1, 'ayur-massage-bath', 40)" disabled>−</button>
-                            <span class="quantity-value">0</span>
-                            <button class="quantity-btn" onclick="updateQuantity(this, 1, 'ayur-massage-bath', 40)">+</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="product-list-item" data-product="ayur-massage-steam-bath" data-price="45">
-                    <div class="product-list-info">
-                        <h4 class="product-list-name">Herbal Oil Whole Body Massage, Herbal Steam &amp; Herbal Bath</h4>
-                        <p class="product-list-detail">Only two herbal baths can be arranged at once</p>
-                    </div>
-                    <div class="product-list-right">
-                        <div class="product-list-pricing">
-                            <span class="product-list-price">USD 45</span>
-                            <span class="product-list-original">$60</span>
-                        </div>
-                        <div class="quantity-counter">
-                            <button class="quantity-btn" onclick="updateQuantity(this, -1, 'ayur-massage-steam-bath', 45)" disabled>−</button>
-                            <span class="quantity-value">0</span>
-                            <button class="quantity-btn" onclick="updateQuantity(this, 1, 'ayur-massage-steam-bath', 45)">+</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="product-list-item" data-product="ayur-package-a" data-price="50">
-                    <div class="product-list-info">
-                        <h4 class="product-list-name">Complete Ayurveda Treatment Package A</h4>
-                        <p class="product-list-detail">Whole body massage, facial massage, herbal steam bath &amp; herbal bath &mdash; only two herbal baths can be arranged at once</p>
-                    </div>
-                    <div class="product-list-right">
-                        <div class="product-list-pricing">
-                            <span class="product-list-price">USD 50</span>
-                            <span class="product-list-original">$68</span>
-                        </div>
-                        <div class="quantity-counter">
-                            <button class="quantity-btn" onclick="updateQuantity(this, -1, 'ayur-package-a', 50)" disabled>−</button>
-                            <span class="quantity-value">0</span>
-                            <button class="quantity-btn" onclick="updateQuantity(this, 1, 'ayur-package-a', 50)">+</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="product-list-item" data-product="shirodhara-head" data-price="40">
-                    <div class="product-list-info">
-                        <h4 class="product-list-name">Shirodhara &amp; Head Massage</h4>
-                        <p class="product-list-detail">Warm oil poured in a soothing stream over the forehead</p>
-                    </div>
-                    <div class="product-list-right">
-                        <div class="product-list-pricing">
-                            <span class="product-list-price">USD 40</span>
-                            <span class="product-list-original">$55</span>
-                        </div>
-                        <div class="quantity-counter">
-                            <button class="quantity-btn" onclick="updateQuantity(this, -1, 'shirodhara-head', 40)" disabled>−</button>
-                            <span class="quantity-value">0</span>
-                            <button class="quantity-btn" onclick="updateQuantity(this, 1, 'shirodhara-head', 40)">+</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="product-list-item" data-product="abhyanga-shirodhara" data-price="75">
-                    <div class="product-list-info">
-                        <h4 class="product-list-name">Abhyanga &amp; Shirodhara</h4>
-                        <p class="product-list-detail">Full-body warm oil ritual with forehead oil stream</p>
-                    </div>
-                    <div class="product-list-right">
-                        <div class="product-list-pricing">
-                            <span class="product-list-price">USD 75</span>
-                            <span class="product-list-original">$89</span>
-                        </div>
-                        <div class="quantity-counter">
-                            <button class="quantity-btn" onclick="updateQuantity(this, -1, 'abhyanga-shirodhara', 75)" disabled>−</button>
-                            <span class="quantity-value">0</span>
-                            <button class="quantity-btn" onclick="updateQuantity(this, 1, 'abhyanga-shirodhara', 75)">+</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="product-list-item" data-product="reflexology" data-price="20">
-                    <div class="product-list-info">
-                        <h4 class="product-list-name">Reflexology &mdash; Special Foot Massage (Pada Abhyanga)</h4>
-                        <p class="product-list-detail">Pressure-point foot therapy to restore balance</p>
-                    </div>
-                    <div class="product-list-right">
-                        <div class="product-list-pricing">
-                            <span class="product-list-price">USD 20</span>
-                            <span class="product-list-original">$36</span>
-                        </div>
-                        <div class="quantity-counter">
-                            <button class="quantity-btn" onclick="updateQuantity(this, -1, 'reflexology', 20)" disabled>−</button>
-                            <span class="quantity-value">0</span>
-                            <button class="quantity-btn" onclick="updateQuantity(this, 1, 'reflexology', 20)">+</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="product-list-item" data-product="ayur-consultation" data-price="15">
-                    <div class="product-list-info">
-                        <h4 class="product-list-name">Ayurveda Consultation</h4>
-                        <p class="product-list-detail">Pulse reading &amp; personalized recommendations, available on the first day</p>
-                    </div>
-                    <div class="product-list-right">
-                        <div class="product-list-pricing">
-                            <span class="product-list-price">USD 15</span>
-                            <span class="product-list-original">$27</span>
-                        </div>
-                        <div class="quantity-counter">
-                            <button class="quantity-btn" onclick="updateQuantity(this, -1, 'ayur-consultation', 15)" disabled>−</button>
-                            <span class="quantity-value">0</span>
-                            <button class="quantity-btn" onclick="updateQuantity(this, 1, 'ayur-consultation', 15)">+</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="product-list-item" data-product="ayur-facial" data-price="20">
-                    <div class="product-list-info">
-                        <h4 class="product-list-name">Herbal Facial Ritual</h4>
-                        <p class="product-list-detail">Facial cleansing, herbal oil massage, facial steam, herbal powder scrub &amp; pack</p>
-                    </div>
-                    <div class="product-list-right">
-                        <div class="product-list-pricing">
-                            <span class="product-list-price">USD 20</span>
-                            <span class="product-list-original">$34</span>
-                        </div>
-                        <div class="quantity-counter">
-                            <button class="quantity-btn" onclick="updateQuantity(this, -1, 'ayur-facial', 20)" disabled>−</button>
-                            <span class="quantity-value">0</span>
-                            <button class="quantity-btn" onclick="updateQuantity(this, 1, 'ayur-facial', 20)">+</button>
-                        </div>
-                    </div>
-                </div>
-                <p style="font-family: 'Montserrat', sans-serif; font-size: 0.75rem; color: var(--warm-taupe); margin-top: 0.5rem; margin-left: 1.25rem;">Net retreat rates, service charge & taxes included. Pre-booking required for retreat pricing.</p>
+            <h3 class="spa-hotel-title">Aliya Resort &amp; Spa</h3>
+            <div class="spa-table-wrap">
+                <table class="spa-table">
+                    <thead><tr><th>Treatment</th><th>Duration</th><th>Exclusive Retreat Rate</th></tr></thead>
+                    <tbody>
+                        <tr><td>Complete Ayurveda Treatment &mdash; Herbal Oil Whole Body Massage, Facial Massage, Herbal Steam Bath &amp; Herbal Bath</td><td>105 min</td><td>USD 65</td></tr>
+                        <tr><td>Abhyanga &amp; Shirodhara</td><td>75 min</td><td>USD 85</td></tr>
+                        <tr><td>Shirodhara &amp; Head Massage</td><td>45 min</td><td>USD 50</td></tr>
+                        <tr><td>Pada Abhyanga (Foot Reflexology)</td><td>60 min</td><td>USD 35</td></tr>
+                        <tr><td>Ayurvedic Facial Ritual &mdash; Facial Cleansing, Herbal Oil Facial Massage, Facial Steam, Herbal Powder Facial Scrub &amp; Facial Pack</td><td>60 min</td><td>USD 34</td></tr>
+                    </tbody>
+                </table>
             </div>
+
+            <h3 class="spa-hotel-title">Anantara Peace Haven</h3>
+            <div class="spa-table-wrap">
+                <table class="spa-table">
+                    <thead><tr><th>Treatment</th><th>Duration</th><th>Exclusive Retreat Rate</th></tr></thead>
+                    <tbody>
+                        <tr><td>Anantara Signature Massage</td><td>60 min</td><td>USD 145</td></tr>
+                        <tr><td>Stress Release Massage</td><td>60 min</td><td>USD 145</td></tr>
+                        <tr><td>Deep Muscle Massage</td><td>60 min</td><td>USD 145</td></tr>
+                        <tr><td>Body Scrub</td><td>30 min</td><td>USD 85</td></tr>
+                        <tr><td>Body Wrap</td><td>30 min</td><td>USD 85</td></tr>
+                        <tr><td>Aromatic Blossom Bath</td><td>30 min</td><td>USD 85</td></tr>
+                        <tr><td>Ayurvedic Chavi Ritual</td><td>45 min</td><td>USD 95</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <p class="spa-note">Treatment times will be arranged directly by participants with the resort&rsquo;s spa team upon arrival.</p>
         </section>
 
         <div class="section-divider"></div>
@@ -1137,20 +1048,20 @@ Special retreat discounted rates apply exclusively to pre-booked experiences arr
              ============================================ -->
         <section class="addons-category">
             <div class="category-header">
-                <h2 class="category-title">OCEAN &amp; ISLAND EXPERIENCES</h2>
-                <p class="category-subtitle">Because Sri Lanka waters are meant to be lived!</p>
+                <h2 class="category-title">OCEAN &amp; WILD EXPERIENCES</h2>
+                <p class="category-subtitle">Because Sri Lanka is meant to be experienced beyond the retreat. Discover some of the island&rsquo;s most iconic wildlife, ocean and cultural experiences. Each excursion has been carefully selected and can be added to your journey based on availability. All prices are per person and include applicable service charges and taxes.</p>
             </div>
 
             <div class="products-list">
-                <div class="product-list-item" data-product="surf-lesson" data-price="105">
-                    <div class="product-list-thumb"><img src="surf.jpeg" alt="Surfing the Indian Ocean" loading="lazy"/></div>
+                <div class="product-list-item" data-product="surf-lesson" data-price="145">
+                    <div class="product-list-thumb"><img src="surf.jpeg" alt="Surf the Indian Ocean" loading="lazy"/></div>
                     <div class="product-list-info">
                         <h4 class="product-list-name">Surf the Indian Ocean</h4>
-                        <p class="product-list-detail">Experience the thrill of riding your first wave with a beginner-friendly surf lesson. Includes surfboards, sunscreen, rashguards, towels, water &amp; expert instruction.<br>1.5 hrs &mdash; ideal for first-timers</p>
+                        <p class="product-list-detail">Catch your first wave with a beginner-friendly surf lesson on the southern coast at Anantara Peace Haven. Includes professional instructor, surfboard, rash guard, sunscreen &amp; towel.<br>Approx. 1.5 hrs &middot; Beginner friendly &middot; Weather &amp; sea conditions dependent</p>
                     </div>
                     <div class="product-list-right">
-                        <span class="product-list-price">USD 105</span>
-                        <button class="checkbox-btn" onclick="toggleProduct(this, 'surf-lesson', 105)">
+                        <span class="product-list-price">USD 145</span>
+                        <button class="checkbox-btn" onclick="toggleProduct(this, 'surf-lesson', 145)">
                             <svg viewBox="0 0 24 24" fill="none" stroke-width="3">
                                 <path d="M5 13l4 4L19 7"/>
                             </svg>
@@ -1158,57 +1069,82 @@ Special retreat discounted rates apply exclusively to pre-booked experiences arr
                     </div>
                 </div>
 
-                <div class="product-list-item" data-product="whale-watching" data-price="0">
-                    <div class="product-list-thumb"><img src="whales.jpeg" alt="Whale watching off the southern coast" loading="lazy"/></div>
+                <div class="product-list-item" data-product="whale-watching" data-price="90">
+                    <div class="product-list-thumb"><img src="whales.jpeg" alt="Whale Watching" loading="lazy"/></div>
                     <div class="product-list-info">
                         <h4 class="product-list-name">Whale Watching</h4>
-                        <p class="product-list-detail">Set out on the Indian Ocean in search of blue whales, sperm whales and playful dolphin pods along Sri Lanka&rsquo;s southern coast &mdash; one of the best whale-watching regions on earth.<br>Approx. 3&ndash;4 hrs &mdash; early morning departure, seasonal</p>
+                        <p class="product-list-detail">Head into the Indian Ocean in search of blue whales, sperm whales and dolphins. Includes boat excursion, light breakfast, life jacket, seasickness tablets, insurance &amp; transfers.<br>Approx. 3&ndash;4 hrs &middot; Early morning departure &middot; Suitable for all levels</p>
                     </div>
                     <div class="product-list-right">
-                        <span class="product-list-price">Upon Request</span>
+                        <span class="product-list-price">USD 90</span>
+                        <button class="checkbox-btn" onclick="toggleProduct(this, 'whale-watching', 90)">
+                            <svg viewBox="0 0 24 24" fill="none" stroke-width="3">
+                                <path d="M5 13l4 4L19 7"/>
+                            </svg>
+                        </button>
                     </div>
                 </div>
 
-                <div class="product-list-item" data-product="yala-safari" data-price="0">
+                <div class="product-list-item" data-product="yala-safari" data-price="150">
                     <div class="product-list-info">
-                        <h4 class="product-list-name">Yala Jungle Safari</h4>
-                        <p class="product-list-detail">Experience one of Sri Lanka&rsquo;s most iconic wildlife reserves on a guided safari through Yala National Park. Keep an eye out for elephants, crocodiles, sloth bears, exotic birdlife, and, with a little luck, the elusive Sri Lankan leopard.<br>Approx. 3&ndash;4 hrs &mdash; best at sunrise or late afternoon &middot; Wildlife sightings cannot be guaranteed</p>
+                        <h4 class="product-list-name">Yala National Park Safari <span class="exp-star">*</span></h4>
+                        <p class="product-list-detail">Private safari jeep through Sri Lanka&rsquo;s most celebrated reserve &mdash; elephants, crocodiles, buffalo, birdlife and the elusive leopard. Includes jeep, transfers, driver &amp; tracker and park fees.<br>Approx. 4&ndash;5 hrs &middot; Wildlife sightings cannot be guaranteed</p>
                     </div>
                     <div class="product-list-right">
-                        <span class="product-list-price">Upon Request</span>
+                        <span class="product-list-price">USD 150</span>
+                        <button class="checkbox-btn" onclick="toggleProduct(this, 'yala-safari', 150)">
+                            <svg viewBox="0 0 24 24" fill="none" stroke-width="3">
+                                <path d="M5 13l4 4L19 7"/>
+                            </svg>
+                        </button>
                     </div>
                 </div>
 
-                <div class="product-list-item" data-product="minneriya-elephants" data-price="0">
+                <div class="product-list-item" data-product="minneriya-elephants" data-price="125">
                     <div class="product-list-info">
-                        <h4 class="product-list-name">Minneriya National Park &mdash; Wild Elephants</h4>
-                        <p class="product-list-detail">Witness one of Asia&rsquo;s most remarkable wildlife experiences as herds of wild elephants roam freely through Minneriya National Park. Depending on the season, you may experience the famous &ldquo;Gathering,&rdquo; where dozens of elephants congregate around the reservoir.<br>Approx. 3 hrs &mdash; seasonal experience &middot; Sightings depend on season and weather</p>
+                        <h4 class="product-list-name">Minneriya National Park Safari <span class="exp-star">*</span></h4>
+                        <p class="product-list-detail">Witness elephants roaming Minneriya &mdash; during the seasonal &ldquo;Gathering,&rdquo; dozens congregate around the reservoir. Includes safari jeep, transfers, guide &amp; park entrance.<br>Approx. 3&ndash;4 hrs &middot; Seasonal &middot; Weather dependent</p>
                     </div>
                     <div class="product-list-right">
-                        <span class="product-list-price">Upon Request</span>
+                        <span class="product-list-price">USD 125</span>
+                        <button class="checkbox-btn" onclick="toggleProduct(this, 'minneriya-elephants', 125)">
+                            <svg viewBox="0 0 24 24" fill="none" stroke-width="3">
+                                <path d="M5 13l4 4L19 7"/>
+                            </svg>
+                        </button>
                     </div>
                 </div>
 
-                <div class="product-list-item" data-product="tea-plucking" data-price="0">
+                <div class="product-list-item" data-product="tea-plucking" data-price="65">
                     <div class="product-list-info">
-                        <h4 class="product-list-name">Tea Plucking Experience</h4>
-                        <p class="product-list-detail">Step into Sri Lanka&rsquo;s tea country and learn the traditional art of tea plucking alongside local tea pickers. Discover the journey from leaf to cup before enjoying a freshly brewed Ceylon tea overlooking the plantations.<br>Approx. 1 hr &mdash; authentic cultural experience</p>
+                        <h4 class="product-list-name">Tea Plucking Experience <span class="exp-star">*</span></h4>
+                        <p class="product-list-detail">Join local pickers in the fields, tour a working tea factory and enjoy a guided Ceylon tea tasting. Includes plantation visit, transfers, plucking experience &amp; tasting.<br>Approx. 1.5&ndash;2 hrs &middot; Easy</p>
                     </div>
                     <div class="product-list-right">
-                        <span class="product-list-price">Upon Request</span>
+                        <span class="product-list-price">USD 65</span>
+                        <button class="checkbox-btn" onclick="toggleProduct(this, 'tea-plucking', 65)">
+                            <svg viewBox="0 0 24 24" fill="none" stroke-width="3">
+                                <path d="M5 13l4 4L19 7"/>
+                            </svg>
+                        </button>
                     </div>
                 </div>
 
-                <div class="product-list-item" data-product="sigiriya-climb" data-price="0">
+                <div class="product-list-item" data-product="sigiriya-climb" data-price="55">
                     <div class="product-list-info">
-                        <h4 class="product-list-name">Sunrise Sigiriya Climb</h4>
-                        <p class="product-list-detail">Climb the legendary Sigiriya Rock Fortress at sunrise, when cooler temperatures and golden morning light reveal breathtaking panoramic views. Explore the ancient palace ruins and discover one of Sri Lanka&rsquo;s most celebrated UNESCO World Heritage Sites.<br>Approx. 2&ndash;3 hrs &mdash; moderate climb (1,200+ steps) &middot; Entrance fees included</p>
+                        <h4 class="product-list-name">Sunrise Sigiriya Climb <span class="exp-star">*</span></h4>
+                        <p class="product-list-detail">Climb the iconic Sigiriya Rock Fortress at sunrise, before the crowds, for golden light and panoramic views of this UNESCO site. Includes entrance ticket &amp; local guide.<br>Approx. 2&ndash;3 hrs &middot; Moderate (1,200+ steps)</p>
                     </div>
                     <div class="product-list-right">
-                        <span class="product-list-price">Upon Request</span>
+                        <span class="product-list-price">USD 55</span>
+                        <button class="checkbox-btn" onclick="toggleProduct(this, 'sigiriya-climb', 55)">
+                            <svg viewBox="0 0 24 24" fill="none" stroke-width="3">
+                                <path d="M5 13l4 4L19 7"/>
+                            </svg>
+                        </button>
                     </div>
                 </div>
-                <p style="font-family: 'Montserrat', sans-serif; font-size: 0.75rem; color: var(--warm-taupe); margin-top: 0.5rem; margin-left: 1.25rem;">Weather dependent. Rates include service charge and taxes.<br><b>Special retreat discounted rates apply exclusively to pre-booked experiences arranged before arrival. Bookings made directly at the resort will be charged at the hotel's standard published full rate.</b></p>
+                <p style="font-family: 'Montserrat', sans-serif; font-size: 0.75rem; color: var(--warm-taupe); margin-top: 0.5rem; margin-left: 1.25rem;"><span class="exp-star">*</span> Seasonal / subject to availability. Weather and wildlife conditions may affect the experience. Pre-booked retreat rates apply exclusively to experiences arranged before arrival.</p>
             </div>
         </section>
 
