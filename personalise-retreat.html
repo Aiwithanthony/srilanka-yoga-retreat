@@ -1,0 +1,1407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <!-- Cookiebot -->
+    <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="984751e2-40cc-463a-861d-09f670823b85" type="text/javascript" async></script>
+    <title>PERSONALIZE YOUR RETREAT | YogiNomads Sri Lanka</title>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8CP3PNVHW3"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-8CP3PNVHW3');
+    </script>
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Lato:wght@300;400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+    
+    <style>
+        :root {
+            --cream: #FDF8F3;
+            --sand: #E8DDD4;
+            --blush: #E8C4B8;
+            --rose-gold: #C9A89A;
+            --warm-taupe: #8B7D74;
+            --deep-teal: #1A5F5E;
+            --ocean: #2A7B8C;
+            --sunset-coral: #E6A68F;
+            --lavender-mist: #D4C8D9;
+            --soft-gold: #D4B896;
+            --golden-hour: #E8B87D;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+
+        body {
+            font-family: 'Lato', sans-serif;
+            font-weight: 300;
+            color: #4A4A4A;
+            background: var(--cream);
+            overflow-x: hidden;
+            line-height: 1.7;
+        }
+
+        /* Hero Section */
+        .addons-hero {
+            position: relative;
+            height: 50vh;
+            min-height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .addons-hero-bg {
+            position: absolute;
+            inset: 0;
+        }
+
+        .addons-hero-bg img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center 60%;
+        }
+
+        .addons-hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(
+                180deg,
+                rgba(0,0,0,0.3) 0%,
+                rgba(0,0,0,0.4) 50%,
+                rgba(26,95,94,0.6) 100%
+            );
+        }
+
+        .addons-hero-content {
+            position: relative;
+            z-index: 10;
+            text-align: center;
+            color: white;
+            padding: 0 1.5rem;
+            max-width: 750px;
+        }
+
+        .addons-hero-logo {
+            width: 100px;
+            height: auto;
+            margin-bottom: 1rem;
+            filter: brightness(0) invert(1);
+        }
+
+        .addons-hero-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(2.2rem, 5vw, 2.625rem);
+            font-weight: 400;
+            margin-bottom: 1rem;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+
+        .addons-hero-subtitle {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1rem;
+            font-weight: 400;
+            opacity: 0.95;
+            line-height: 1.7;
+            text-shadow: 0 1px 5px rgba(0,0,0,0.3);
+        }
+
+        /* Main Content with Background */
+        .addons-main {
+            position: relative;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 3rem 1.5rem 6rem;
+        }
+
+        /* Background texture overlay */
+        .addons-main::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(253,248,243,0.97) 0%, rgba(232,221,212,0.95) 100%);
+            z-index: -1;
+        }
+
+        /* Back Link */
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.9rem;
+            color: var(--warm-taupe);
+            text-decoration: none;
+            margin-bottom: 2rem;
+            transition: color 0.3s ease;
+        }
+
+        .back-link:hover {
+            color: var(--deep-teal);
+        }
+
+        .back-link svg {
+            width: 18px;
+            height: 18px;
+        }
+
+        /* Category Section */
+        .addons-category {
+            margin-bottom: 3rem;
+        }
+
+        .category-header {
+            margin-bottom: 1.25rem;
+        }
+
+        .category-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.75rem;
+            font-weight: 600;
+            color: var(--deep-teal);
+            margin-bottom: 0.25rem;
+        }
+
+        .category-subtitle {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.85rem;
+            color: var(--warm-taupe);
+            font-style: italic;
+        }
+
+        /* Product Grid for Cards with Images */
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.25rem;
+        }
+
+        .products-grid.single-col {
+            grid-template-columns: 1fr;
+            max-width: 550px;
+        }
+
+        /* Product Card with Image */
+        .product-card {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .product-card:hover {
+            box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+        }
+
+        .product-card.selected {
+            border-color: var(--deep-teal);
+            box-shadow: 0 8px 30px rgba(26,95,94,0.15);
+        }
+
+        .product-image {
+            position: relative;
+            height: 160px;
+            overflow: hidden;
+        }
+
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .product-card:hover .product-image img {
+            transform: scale(1.05);
+        }
+
+        .product-badge {
+            position: absolute;
+            top: 0.75rem;
+            left: 0.75rem;
+            background: var(--deep-teal);
+            color: white;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.65rem;
+            font-weight: 600;
+            padding: 0.25rem 0.6rem;
+            border-radius: 20px;
+            text-transform: uppercase;
+            letter-spacing: 0.03em;
+        }
+
+        .product-content {
+            padding: 1.25rem;
+        }
+
+        .product-name {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--deep-teal);
+            margin-bottom: 0.4rem;
+            line-height: 1.3;
+        }
+
+        .product-description {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.8rem;
+            color: var(--warm-taupe);
+            margin-bottom: 1rem;
+            line-height: 1.5;
+        }
+
+        .product-pricing {
+            display: flex;
+            align-items: baseline;
+            gap: 0.5rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .product-price {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: var(--deep-teal);
+        }
+
+        .product-price-note {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.75rem;
+            color: var(--warm-taupe);
+        }
+
+        .product-footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+            padding-top: 0.75rem;
+            border-top: 1px solid var(--sand);
+        }
+
+        .product-detail {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.75rem;
+            color: var(--rose-gold);
+            font-weight: 500;
+        }
+
+        /* Product List Items (Compact Style) */
+        .products-list {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        .product-list-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: white;
+            padding: 1rem 1.25rem;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.04);
+            border: 2px solid transparent;
+            transition: all 0.3s ease;
+            gap: 1rem;
+        }
+
+        .product-list-item:hover {
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        }
+
+        .product-list-item.selected {
+            border-color: var(--deep-teal);
+            background: rgba(26,95,94,0.02);
+        }
+
+        .product-list-info {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .product-list-name {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: var(--deep-teal);
+            margin-bottom: 0.15rem;
+            line-height: 1.3;
+        }
+
+        .product-list-detail {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.75rem;
+            color: var(--warm-taupe);
+        }
+
+        .product-list-right {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            flex-shrink: 0;
+        }
+
+        .product-list-pricing {
+            display: flex;
+            align-items: baseline;
+            gap: 0.4rem;
+            text-align: right;
+        }
+
+        .product-list-price {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--deep-teal);
+        }
+
+        .product-list-original {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.75rem;
+            color: var(--warm-taupe);
+            text-decoration: line-through;
+        }
+
+        /* Quantity Counter */
+        .quantity-counter {
+            display: flex;
+            align-items: center;
+            gap: 0;
+            border: 1px solid var(--sand);
+            border-radius: 8px;
+            overflow: hidden;
+            background: white;
+        }
+
+        .quantity-btn {
+            width: 32px;
+            height: 32px;
+            background: var(--cream);
+            border: none;
+            color: var(--deep-teal);
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .quantity-btn:hover:not(:disabled) {
+            background: var(--sand);
+        }
+
+        .quantity-btn:disabled {
+            opacity: 0.4;
+            cursor: not-allowed;
+        }
+
+        .quantity-value {
+            width: 36px;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--deep-teal);
+            background: white;
+        }
+
+        /* Checkbox Button */
+        .checkbox-btn {
+            width: 28px;
+            height: 28px;
+            border: 2px solid var(--sand);
+            border-radius: 6px;
+            background: white;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s ease;
+            flex-shrink: 0;
+        }
+
+        .checkbox-btn:hover {
+            border-color: var(--deep-teal);
+        }
+
+        .checkbox-btn.checked {
+            background: var(--deep-teal);
+            border-color: var(--deep-teal);
+        }
+
+        .checkbox-btn svg {
+            width: 16px;
+            height: 16px;
+            stroke: white;
+            opacity: 0;
+            transition: opacity 0.2s ease;
+        }
+
+        .checkbox-btn.checked svg {
+            opacity: 1;
+        }
+
+        /* Info Box */
+        .info-box {
+            background: rgba(26,95,94,0.06);
+            border-left: 3px solid var(--deep-teal);
+            padding: 0.75rem 1rem;
+            border-radius: 0 8px 8px 0;
+            margin-top: 0.75rem;
+        }
+
+        .info-box p {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.8rem;
+            color: var(--deep-teal);
+            line-height: 1.5;
+        }
+
+        /* Section Divider */
+        .section-divider {
+            height: 1px;
+            background: var(--sand);
+            margin: 2.5rem 0;
+        }
+
+        /* Floating Cart Summary */
+        .cart-summary {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: white;
+            padding: 1rem 1.5rem;
+            box-shadow: 0 -4px 30px rgba(0,0,0,0.12);
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 2rem;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+        }
+
+        .cart-summary.visible {
+            transform: translateY(0);
+        }
+
+        .cart-summary-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 2rem;
+            max-width: 1100px;
+            width: 100%;
+        }
+
+        .cart-summary-info {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .cart-items-count {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.85rem;
+            color: var(--warm-taupe);
+        }
+
+        .cart-total-wrapper {
+            display: flex;
+            align-items: baseline;
+            gap: 0.5rem;
+        }
+
+        .cart-total-label {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.8rem;
+            color: var(--warm-taupe);
+        }
+
+        .cart-total {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.75rem;
+            font-weight: 600;
+            color: var(--deep-teal);
+        }
+
+        .checkout-btn {
+            background: var(--deep-teal);
+            color: white;
+            border: none;
+            padding: 0.9rem 2rem;
+            border-radius: 50px;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.05rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(26,95,94,0.25);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .checkout-btn:hover {
+            background: var(--ocean);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(26,95,94,0.35);
+        }
+
+        .checkout-btn svg {
+            width: 18px;
+            height: 18px;
+        }
+
+        /* Footer */
+        .addons-footer {
+            background: var(--deep-teal);
+            color: rgba(255,255,255,0.7);
+            padding: 2rem 1.5rem;
+            text-align: center;
+            margin-bottom: 75px;
+        }
+
+        .addons-footer p {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .addons-footer a {
+            color: var(--soft-gold);
+            text-decoration: none;
+        }
+
+        .addons-footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .addons-hero {
+                height: 40vh;
+                min-height: 320px;
+            }
+
+            .addons-hero-title {
+                font-size: 1.8rem;
+            }
+
+            .addons-hero-subtitle {
+                font-size: 0.9rem;
+            }
+
+            .addons-main {
+                padding: 2rem 1rem 5rem;
+            }
+
+            .products-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .category-title {
+                font-size: 1.5rem;
+            }
+
+            .category-subtitle {
+                text-align: justify;
+            }
+
+            .product-list-item {
+                flex-wrap: wrap;
+                padding: 1rem;
+            }
+
+            .product-list-info {
+                flex: 1 1 100%;
+                margin-bottom: 0.75rem;
+            }
+
+            .product-list-right {
+                width: 100%;
+                justify-content: space-between;
+                padding-top: 0.75rem;
+                border-top: 1px solid var(--sand);
+            }
+
+            .cart-summary {
+                padding: 1rem;
+            }
+
+            .cart-summary-inner {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .cart-summary-info {
+                width: 100%;
+                justify-content: space-between;
+            }
+
+            .checkout-btn {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .addons-footer {
+                margin-bottom: 130px;
+            }
+        }
+
+        @media (min-width: 769px) and (max-width: 1024px) {
+            .addons-main {
+                padding: 3rem 2rem 6rem;
+            }
+        }
+
+        /* ===========================================================
+           Laptop responsive refinements (1025px–1920px)
+           =========================================================== */
+        @media (min-width: 1025px) {
+            .addons-main {
+                max-width: min(1200px, 92vw);
+                padding-left: clamp(1.5rem, 3vw, 3rem);
+                padding-right: clamp(1.5rem, 3vw, 3rem);
+            }
+            .addons-hero-title {
+                font-size: clamp(2.2rem, 4vw, 3.6rem);
+            }
+            .addons-hero-subtitle {
+                font-size: clamp(0.95rem, 1vw + 0.4rem, 1.15rem);
+                max-width: min(800px, 80vw);
+            }
+            .category-title {
+                font-size: clamp(1.4rem, 2.2vw, 2rem);
+            }
+            .products-grid {
+                gap: clamp(1rem, 1.5vw, 1.75rem);
+            }
+        }
+
+        @media (min-width: 1025px) and (max-width: 1280px) {
+            .addons-main {
+                padding-top: clamp(2rem, 4vw, 3rem);
+            }
+        }
+
+        @media (min-width: 1600px) {
+            .addons-main {
+                max-width: 1300px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Hero Section -->
+    <section class="addons-hero">
+        <div class="addons-hero-bg">
+            <img src="island.jpeg" alt="Sri Lanka aerial view" loading="eager"/>
+        </div>
+        <div class="addons-hero-overlay"></div>
+        <div class="addons-hero-content">
+            <img src="Beige-and-Blue.png" alt="Yogi Nomads" class="addons-hero-logo"/>
+            <h1 class="addons-hero-title">PERSONALIZE YOUR RETREAT</h1>
+            <p class="addons-hero-subtitle">
+                Now that your place on the retreat is secured, you can tailor your experience with carefully selected upgrades, treatments, and experiences. All selections are optional and subject to availability.
+            </p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="addons-main">
+
+        <a href="index.html" class="back-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M19 12H5M12 19l-7-7 7-7"/>
+            </svg>
+            Back to Retreat
+        </a>
+
+        <!-- ============================================
+             ROOM & ACCOMMODATION UPGRADES
+             ============================================ -->
+        <section class="addons-category">
+            <div class="category-header">
+                <h2 class="category-title">ROOM UPGRADES</h2>
+                <p class="category-subtitle">If you wish to add extra nights, please share your flight details with us via email or WhatsApp so we can coordinate your arrival, check-in and check-out smoothly.</p>
+            </div>
+
+            <div class="products-grid single-col">
+                <!-- Single Occupancy -->
+                <div class="product-card" data-product="single-occupancy" data-price="895">
+                    <div class="product-image">
+                        <img src="IMG_7409.webp" alt="Private hotel room" loading="lazy"/>
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-name">Upgrade to Single Occupancy</h3>
+                        <p class="product-description">Enjoy your own private room in all 3 hotels.</p>
+                        <div class="product-pricing">
+                            <span class="product-price">USD 895</span>
+                            <span class="product-price-note">for 7 nights</span>
+                        </div>
+                        <div class="product-footer">
+                            <span class="product-detail">• Limited availability</span>
+                            <button class="checkbox-btn" onclick="toggleProduct(this, 'single-occupancy', 895)">
+                                <svg viewBox="0 0 24 24" fill="none" stroke-width="3">
+                                    <path d="M5 13l4 4L19 7"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Extra Nights & Half Board -->
+            <div class="products-list" style="margin-top: 1.25rem;">
+                <div class="product-list-item" data-product="extra-night-before" data-price="275">
+                    <div class="product-list-info">
+                        <h4 class="product-list-name">Extra 1 Night Before Retreat &mdash; Aliya Resort</h4>
+                        <p class="product-list-detail">Extend your stay and ease into retreat time</p>
+                    </div>
+                    <div class="product-list-right">
+                        <span class="product-list-price">+USD 275</span>
+                        <button class="checkbox-btn" onclick="toggleProduct(this, 'extra-night-before', 275)">
+                            <svg viewBox="0 0 24 24" fill="none" stroke-width="3">
+                                <path d="M5 13l4 4L19 7"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-list-item" data-product="extra-night-after" data-price="450">
+                    <div class="product-list-info">
+                        <h4 class="product-list-name">Extra 1 Night After Retreat &mdash; Anantara Peace Haven</h4>
+                        <p class="product-list-detail">More time to unwind by the ocean</p>
+                    </div>
+                    <div class="product-list-right">
+                        <span class="product-list-price">+USD 450</span>
+                        <button class="checkbox-btn" onclick="toggleProduct(this, 'extra-night-after', 450)">
+                            <svg viewBox="0 0 24 24" fill="none" stroke-width="3">
+                                <path d="M5 13l4 4L19 7"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-list-item" data-product="half-board" data-price="240">
+                    <div class="product-list-info">
+                        <h4 class="product-list-name">Upgrade to Half Board</h4>
+                        <p class="product-list-detail">5 nights at the first 2 hotels with dinners included</p>
+                    </div>
+                    <div class="product-list-right">
+                        <div class="product-list-pricing">
+                            <span class="product-list-price">USD 240</span>
+                            <span class="product-list-original" style="text-decoration: none;">for 5 nights</span>
+                        </div>
+                        <button class="checkbox-btn" onclick="toggleProduct(this, 'half-board', 240)">
+                            <svg viewBox="0 0 24 24" fill="none" stroke-width="3">
+                                <path d="M5 13l4 4L19 7"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <p style="font-family: 'Montserrat', sans-serif; font-size: 0.75rem; color: var(--warm-taupe); margin-top: 0.5rem; margin-left: 1.25rem;">Taxes & service charges included</p>
+            </div>
+        </section>
+
+        <div class="section-divider"></div>
+
+        <!-- ============================================
+             SEPARATE TRANSFER
+             ============================================ -->
+        <section class="addons-category">
+            <div class="category-header">
+                <h2 class="category-title">SEPARATE TRANSFER</h2>
+                <p class="category-subtitle">We book your transfer to match your international flight for a smooth arrival to the island in case you are not flying with the group. English speaking driver included.<br>
+Advance confirmation required. Please send your confirmed flight details via email or WhatsApp to ensure proper scheduling.</p>
+            </div>
+
+            <div class="products-list">
+                <div class="product-list-item" data-product="transfer-oneway" data-price="150">
+                    <div class="product-list-info">
+                        <h4 class="product-list-name">One Way Transfer</h4>
+                        <p class="product-list-detail">Airport pick-up or drop-off, timed to your flight</p>
+                    </div>
+                    <div class="product-list-right">
+                        <span class="product-list-price">+USD 150</span>
+                        <button class="checkbox-btn" onclick="toggleProduct(this, 'transfer-oneway', 150)">
+                            <svg viewBox="0 0 24 24" fill="none" stroke-width="3">
+                                <path d="M5 13l4 4L19 7"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-list-item" data-product="transfer-roundtrip" data-price="300">
+                    <div class="product-list-info">
+                        <h4 class="product-list-name">Round Trip Transfer</h4>
+                        <p class="product-list-detail">Airport pick-up and drop-off, timed to your flights</p>
+                    </div>
+                    <div class="product-list-right">
+                        <span class="product-list-price">+USD 300</span>
+                        <button class="checkbox-btn" onclick="toggleProduct(this, 'transfer-roundtrip', 300)">
+                            <svg viewBox="0 0 24 24" fill="none" stroke-width="3">
+                                <path d="M5 13l4 4L19 7"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <p style="font-family: 'Montserrat', sans-serif; font-size: 0.75rem; color: var(--warm-taupe); margin-top: 0.5rem; margin-left: 1.25rem;">Advance confirmation required. Transfer service at an additional cost.</p>
+            </div>
+        </section>
+
+        <div class="section-divider"></div>
+
+        <!-- ============================================
+             SPA EXPERIENCES
+             ============================================ -->
+        <section class="addons-category">
+            <div class="category-header">
+                <h2 class="category-title">SPA &amp; AYURVEDIC EXPERIENCES</h2>
+                <p class="category-subtitle"><b>Availability is limited. Advance booking recommended.<br>
+Special retreat discounted rates apply exclusively to pre-booked experiences arranged before arrival. Bookings made directly at the resort will be charged at the hotel&rsquo;s standard published full rate.</b></p>
+            </div>
+
+            <div class="products-list">
+                <div class="product-list-item" data-product="ayur-massage-bath" data-price="40">
+                    <div class="product-list-info">
+                        <h4 class="product-list-name">Herbal Oil Whole Body Massage &amp; Herbal Bath or Steam Bath</h4>
+                        <p class="product-list-detail">USD 35 per person for groups of 20 or more</p>
+                    </div>
+                    <div class="product-list-right">
+                        <div class="product-list-pricing">
+                            <span class="product-list-price">USD 40</span>
+                            <span class="product-list-original">$55</span>
+                        </div>
+                        <div class="quantity-counter">
+                            <button class="quantity-btn" onclick="updateQuantity(this, -1, 'ayur-massage-bath', 40)" disabled>−</button>
+                            <span class="quantity-value">0</span>
+                            <button class="quantity-btn" onclick="updateQuantity(this, 1, 'ayur-massage-bath', 40)">+</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-list-item" data-product="ayur-massage-steam-bath" data-price="45">
+                    <div class="product-list-info">
+                        <h4 class="product-list-name">Herbal Oil Whole Body Massage, Herbal Steam &amp; Herbal Bath</h4>
+                        <p class="product-list-detail">Only two herbal baths can be arranged at once</p>
+                    </div>
+                    <div class="product-list-right">
+                        <div class="product-list-pricing">
+                            <span class="product-list-price">USD 45</span>
+                            <span class="product-list-original">$60</span>
+                        </div>
+                        <div class="quantity-counter">
+                            <button class="quantity-btn" onclick="updateQuantity(this, -1, 'ayur-massage-steam-bath', 45)" disabled>−</button>
+                            <span class="quantity-value">0</span>
+                            <button class="quantity-btn" onclick="updateQuantity(this, 1, 'ayur-massage-steam-bath', 45)">+</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-list-item" data-product="ayur-package-a" data-price="50">
+                    <div class="product-list-info">
+                        <h4 class="product-list-name">Complete Ayurveda Treatment Package A</h4>
+                        <p class="product-list-detail">Whole body massage, facial massage, herbal steam bath &amp; herbal bath &mdash; only two herbal baths can be arranged at once</p>
+                    </div>
+                    <div class="product-list-right">
+                        <div class="product-list-pricing">
+                            <span class="product-list-price">USD 50</span>
+                            <span class="product-list-original">$68</span>
+                        </div>
+                        <div class="quantity-counter">
+                            <button class="quantity-btn" onclick="updateQuantity(this, -1, 'ayur-package-a', 50)" disabled>−</button>
+                            <span class="quantity-value">0</span>
+                            <button class="quantity-btn" onclick="updateQuantity(this, 1, 'ayur-package-a', 50)">+</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-list-item" data-product="shirodhara-head" data-price="40">
+                    <div class="product-list-info">
+                        <h4 class="product-list-name">Shirodhara &amp; Head Massage</h4>
+                        <p class="product-list-detail">Warm oil poured in a soothing stream over the forehead</p>
+                    </div>
+                    <div class="product-list-right">
+                        <div class="product-list-pricing">
+                            <span class="product-list-price">USD 40</span>
+                            <span class="product-list-original">$55</span>
+                        </div>
+                        <div class="quantity-counter">
+                            <button class="quantity-btn" onclick="updateQuantity(this, -1, 'shirodhara-head', 40)" disabled>−</button>
+                            <span class="quantity-value">0</span>
+                            <button class="quantity-btn" onclick="updateQuantity(this, 1, 'shirodhara-head', 40)">+</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-list-item" data-product="abhyanga-shirodhara" data-price="75">
+                    <div class="product-list-info">
+                        <h4 class="product-list-name">Abhyanga &amp; Shirodhara</h4>
+                        <p class="product-list-detail">Full-body warm oil ritual with forehead oil stream</p>
+                    </div>
+                    <div class="product-list-right">
+                        <div class="product-list-pricing">
+                            <span class="product-list-price">USD 75</span>
+                            <span class="product-list-original">$89</span>
+                        </div>
+                        <div class="quantity-counter">
+                            <button class="quantity-btn" onclick="updateQuantity(this, -1, 'abhyanga-shirodhara', 75)" disabled>−</button>
+                            <span class="quantity-value">0</span>
+                            <button class="quantity-btn" onclick="updateQuantity(this, 1, 'abhyanga-shirodhara', 75)">+</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-list-item" data-product="reflexology" data-price="20">
+                    <div class="product-list-info">
+                        <h4 class="product-list-name">Reflexology &mdash; Special Foot Massage (Pada Abhyanga)</h4>
+                        <p class="product-list-detail">Pressure-point foot therapy to restore balance</p>
+                    </div>
+                    <div class="product-list-right">
+                        <div class="product-list-pricing">
+                            <span class="product-list-price">USD 20</span>
+                            <span class="product-list-original">$36</span>
+                        </div>
+                        <div class="quantity-counter">
+                            <button class="quantity-btn" onclick="updateQuantity(this, -1, 'reflexology', 20)" disabled>−</button>
+                            <span class="quantity-value">0</span>
+                            <button class="quantity-btn" onclick="updateQuantity(this, 1, 'reflexology', 20)">+</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-list-item" data-product="ayur-consultation" data-price="15">
+                    <div class="product-list-info">
+                        <h4 class="product-list-name">Ayurveda Consultation</h4>
+                        <p class="product-list-detail">Pulse reading &amp; personalized recommendations, available on the first day</p>
+                    </div>
+                    <div class="product-list-right">
+                        <div class="product-list-pricing">
+                            <span class="product-list-price">USD 15</span>
+                            <span class="product-list-original">$27</span>
+                        </div>
+                        <div class="quantity-counter">
+                            <button class="quantity-btn" onclick="updateQuantity(this, -1, 'ayur-consultation', 15)" disabled>−</button>
+                            <span class="quantity-value">0</span>
+                            <button class="quantity-btn" onclick="updateQuantity(this, 1, 'ayur-consultation', 15)">+</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-list-item" data-product="ayur-facial" data-price="20">
+                    <div class="product-list-info">
+                        <h4 class="product-list-name">Herbal Facial Ritual</h4>
+                        <p class="product-list-detail">Facial cleansing, herbal oil massage, facial steam, herbal powder scrub &amp; pack</p>
+                    </div>
+                    <div class="product-list-right">
+                        <div class="product-list-pricing">
+                            <span class="product-list-price">USD 20</span>
+                            <span class="product-list-original">$34</span>
+                        </div>
+                        <div class="quantity-counter">
+                            <button class="quantity-btn" onclick="updateQuantity(this, -1, 'ayur-facial', 20)" disabled>−</button>
+                            <span class="quantity-value">0</span>
+                            <button class="quantity-btn" onclick="updateQuantity(this, 1, 'ayur-facial', 20)">+</button>
+                        </div>
+                    </div>
+                </div>
+                <p style="font-family: 'Montserrat', sans-serif; font-size: 0.75rem; color: var(--warm-taupe); margin-top: 0.5rem; margin-left: 1.25rem;">Net retreat rates, service charge & taxes included. Pre-booking required for retreat pricing.</p>
+            </div>
+        </section>
+
+        <div class="section-divider"></div>
+
+        <!-- ============================================
+             PRIVATE SESSIONS
+             ============================================ -->
+        <section class="addons-category">
+            <div class="category-header">
+                <h2 class="category-title">PRIVATE SESSIONS</h2>
+                <p class="category-subtitle">For those seeking deeper guidance, personal practice, or one-to-one support during the retreat. If you have specific preferences, or medical considerations you'd like us to be aware of, please share them with us in advance via email or WhatsApp.</p>
+            </div>
+
+            <div class="products-list">
+                <div class="product-list-item" data-product="private-yoga" data-price="100">
+                    <div class="product-list-info">
+                        <h4 class="product-list-name">Private Yoga Session with Lina Aoun</h4>
+                        <p class="product-list-detail">60 min one-on-one session tailored to you</p>
+                    </div>
+                    <div class="product-list-right">
+                        <span class="product-list-price">USD 100</span>
+                        <div class="quantity-counter">
+                            <button class="quantity-btn" onclick="updateQuantity(this, -1, 'private-yoga', 100)" disabled>−</button>
+                            <span class="quantity-value">0</span>
+                            <button class="quantity-btn" onclick="updateQuantity(this, 1, 'private-yoga', 100)">+</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-list-item" data-product="advanced-workshop" data-price="120">
+                    <div class="product-list-info">
+                        <h4 class="product-list-name">Advanced Workshop Session with Lina Aoun</h4>
+                        <p class="product-list-detail">60 min deeper exploration of practice</p>
+                    </div>
+                    <div class="product-list-right">
+                        <span class="product-list-price">USD 120</span>
+                        <div class="quantity-counter">
+                            <button class="quantity-btn" onclick="updateQuantity(this, -1, 'advanced-workshop', 120)" disabled>−</button>
+                            <span class="quantity-value">0</span>
+                            <button class="quantity-btn" onclick="updateQuantity(this, 1, 'advanced-workshop', 120)">+</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-list-item" data-product="wellness-consultation" data-price="120">
+                    <div class="product-list-info">
+                        <h4 class="product-list-name">One-to-One Wellness or Life Consultation</h4>
+                        <p class="product-list-detail">75 min guided reflection and support</p>
+                    </div>
+                    <div class="product-list-right">
+                        <span class="product-list-price">USD 120</span>
+                        <div class="quantity-counter">
+                            <button class="quantity-btn" onclick="updateQuantity(this, -1, 'wellness-consultation', 120)" disabled>−</button>
+                            <span class="quantity-value">0</span>
+                            <button class="quantity-btn" onclick="updateQuantity(this, 1, 'wellness-consultation', 120)">+</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-list-item" data-product="meditation-breathwork" data-price="75">
+                    <div class="product-list-info">
+                        <h4 class="product-list-name">Private Meditation or Breathwork Session</h4>
+                        <p class="product-list-detail">30 min grounding and centering practice</p>
+                    </div>
+                    <div class="product-list-right">
+                        <span class="product-list-price">USD 75</span>
+                        <div class="quantity-counter">
+                            <button class="quantity-btn" onclick="updateQuantity(this, -1, 'meditation-breathwork', 75)" disabled>−</button>
+                            <span class="quantity-value">0</span>
+                            <button class="quantity-btn" onclick="updateQuantity(this, 1, 'meditation-breathwork', 75)">+</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="section-divider"></div>
+
+        <!-- ============================================
+             OCEAN & ISLAND EXPERIENCES
+             ============================================ -->
+        <section class="addons-category">
+            <div class="category-header">
+                <h2 class="category-title">OCEAN &amp; ISLAND EXPERIENCES</h2>
+                <p class="category-subtitle">Because Sri Lanka waters are meant to be lived!</p>
+            </div>
+
+            <div class="products-list">
+                <div class="product-list-item" data-product="surf-lesson" data-price="105">
+                    <div class="product-list-info">
+                        <h4 class="product-list-name">Surf the Indian Ocean</h4>
+                        <p class="product-list-detail">Experience the thrill of riding your first wave with a beginner-friendly surf lesson. Includes surfboards, sunscreen, rashguards, towels, water &amp; expert instruction.<br>1.5 hrs &mdash; ideal for first-timers</p>
+                    </div>
+                    <div class="product-list-right">
+                        <span class="product-list-price">USD 105</span>
+                        <button class="checkbox-btn" onclick="toggleProduct(this, 'surf-lesson', 105)">
+                            <svg viewBox="0 0 24 24" fill="none" stroke-width="3">
+                                <path d="M5 13l4 4L19 7"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-list-item" data-product="whale-watching" data-price="0">
+                    <div class="product-list-info">
+                        <h4 class="product-list-name">Whale Watching</h4>
+                        <p class="product-list-detail">Set out on the Indian Ocean in search of blue whales, sperm whales and playful dolphin pods along Sri Lanka&rsquo;s southern coast &mdash; one of the best whale-watching regions on earth.<br>Approx. 3&ndash;4 hrs &mdash; early morning departure, seasonal</p>
+                    </div>
+                    <div class="product-list-right">
+                        <span class="product-list-price">Upon Request</span>
+                    </div>
+                </div>
+
+                <div class="product-list-item" data-product="yala-safari" data-price="0">
+                    <div class="product-list-info">
+                        <h4 class="product-list-name">Yala Jungle Safari</h4>
+                        <p class="product-list-detail">Experience one of Sri Lanka&rsquo;s most iconic wildlife reserves on a guided safari through Yala National Park. Keep an eye out for elephants, crocodiles, sloth bears, exotic birdlife, and, with a little luck, the elusive Sri Lankan leopard.<br>Approx. 3&ndash;4 hrs &mdash; best at sunrise or late afternoon &middot; Wildlife sightings cannot be guaranteed</p>
+                    </div>
+                    <div class="product-list-right">
+                        <span class="product-list-price">Upon Request</span>
+                    </div>
+                </div>
+
+                <div class="product-list-item" data-product="minneriya-elephants" data-price="0">
+                    <div class="product-list-info">
+                        <h4 class="product-list-name">Minneriya National Park &mdash; Wild Elephants</h4>
+                        <p class="product-list-detail">Witness one of Asia&rsquo;s most remarkable wildlife experiences as herds of wild elephants roam freely through Minneriya National Park. Depending on the season, you may experience the famous &ldquo;Gathering,&rdquo; where dozens of elephants congregate around the reservoir.<br>Approx. 3 hrs &mdash; seasonal experience &middot; Sightings depend on season and weather</p>
+                    </div>
+                    <div class="product-list-right">
+                        <span class="product-list-price">Upon Request</span>
+                    </div>
+                </div>
+
+                <div class="product-list-item" data-product="tea-plucking" data-price="0">
+                    <div class="product-list-info">
+                        <h4 class="product-list-name">Tea Plucking Experience</h4>
+                        <p class="product-list-detail">Step into Sri Lanka&rsquo;s tea country and learn the traditional art of tea plucking alongside local tea pickers. Discover the journey from leaf to cup before enjoying a freshly brewed Ceylon tea overlooking the plantations.<br>Approx. 1 hr &mdash; authentic cultural experience</p>
+                    </div>
+                    <div class="product-list-right">
+                        <span class="product-list-price">Upon Request</span>
+                    </div>
+                </div>
+
+                <div class="product-list-item" data-product="sigiriya-climb" data-price="0">
+                    <div class="product-list-info">
+                        <h4 class="product-list-name">Sunrise Sigiriya Climb</h4>
+                        <p class="product-list-detail">Climb the legendary Sigiriya Rock Fortress at sunrise, when cooler temperatures and golden morning light reveal breathtaking panoramic views. Explore the ancient palace ruins and discover one of Sri Lanka&rsquo;s most celebrated UNESCO World Heritage Sites.<br>Approx. 2&ndash;3 hrs &mdash; moderate climb (1,200+ steps) &middot; Entrance fees included</p>
+                    </div>
+                    <div class="product-list-right">
+                        <span class="product-list-price">Upon Request</span>
+                    </div>
+                </div>
+                <p style="font-family: 'Montserrat', sans-serif; font-size: 0.75rem; color: var(--warm-taupe); margin-top: 0.5rem; margin-left: 1.25rem;">Weather dependent. Rates include service charge and taxes.<br><b>Special retreat discounted rates apply exclusively to pre-booked experiences arranged before arrival. Bookings made directly at the resort will be charged at the hotel's standard published full rate.</b></p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="addons-footer">
+        <p><span style="font-weight: 600;">Need guidance?</span><br>
+If you're unsure what to select, you can proceed now or reach out — we're happy to help you decide what suits you best.<br>
+<br>
+<a href="mailto:life@yoginomads.eu">life@yoginomads.eu</a> | <a href="https://wa.me/9613543547">WhatsApp</a></p>
+    </footer>
+
+    <!-- Floating Cart Summary -->
+    <div class="cart-summary" id="cart-summary">
+        <div class="cart-summary-inner">
+            <div class="cart-summary-info">
+                <span class="cart-items-count"><span id="items-count">0</span> items selected</span>
+                <div class="cart-total-wrapper">
+                    <span class="cart-total-label">Total:</span>
+                    <span class="cart-total" id="cart-total">USD 0</span>
+                </div>
+            </div>
+            <button class="checkout-btn" onclick="proceedToCheckout()">
+                Proceed to Checkout
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <script>
+        // ============================================
+        // SHOPIFY CONFIGURATION
+        // ============================================
+        const SHOPIFY_DOMAIN = 'mtqcuh-km.myshopify.com';
+        
+        // Map product IDs to Shopify Variant IDs
+        // TODO (Sri Lanka): create these products in Shopify and paste the new
+        // variant IDs below. Any product left as '' is routed to WhatsApp at
+        // checkout instead of the Shopify cart, so nothing gets silently lost.
+        const VARIANT_IDS = {
+            // Room Upgrades
+            'single-occupancy': '',
+            'extra-night-before': '',
+            'extra-night-after': '',
+            'half-board': '',
+
+            // Separate Transfer
+            'transfer-oneway': '',
+            'transfer-roundtrip': '',
+
+            // Spa & Ayurvedic Experiences
+            'ayur-massage-bath': '',
+            'ayur-massage-steam-bath': '',
+            'ayur-package-a': '',
+            'shirodhara-head': '',
+            'abhyanga-shirodhara': '',
+            'reflexology': '',
+            'ayur-consultation': '',
+            'ayur-facial': '',
+
+            // Private Sessions (same services & prices as before — existing
+            // Shopify products; replace if you create Sri Lanka-specific ones)
+            'private-yoga': '51566815248667',
+            'advanced-workshop': '51566815576347',
+            'wellness-consultation': '51566815510811',
+            'meditation-breathwork': '51566815707419',
+
+            // Ocean & Island Experiences
+            'surf-lesson': ''
+        };
+
+        // ============================================
+        // CART STATE MANAGEMENT
+        // ============================================
+        let cart = {};
+        let cartTotal = 0;
+
+        // Toggle single-selection product (checkbox style)
+        function toggleProduct(btn, productId, price) {
+            const isChecked = btn.classList.contains('checked');
+            
+            const itemEl = btn.closest('.product-card, .product-list-item');
+            const itemName = itemEl ? (itemEl.querySelector('.product-name, .product-list-name')?.textContent.trim() || productId) : productId;
+
+            if (isChecked) {
+                btn.classList.remove('checked');
+                delete cart[productId];
+            } else {
+                btn.classList.add('checked');
+                cart[productId] = { quantity: 1, price: price, name: itemName };
+            }
+            
+            // Update parent card/item visual
+            const parentCard = btn.closest('.product-card, .product-list-item');
+            if (parentCard) {
+                if (isChecked) {
+                    parentCard.classList.remove('selected');
+                } else {
+                    parentCard.classList.add('selected');
+                }
+            }
+            
+            updateCartSummary();
+        }
+
+        // Update quantity for multi-select products
+        function updateQuantity(btn, change, productId, price) {
+            const counter = btn.closest('.quantity-counter');
+            const valueEl = counter.querySelector('.quantity-value');
+            const minusBtn = counter.querySelector('.quantity-btn:first-child');
+            
+            let currentValue = parseInt(valueEl.textContent);
+            let newValue = Math.max(0, currentValue + change);
+            
+            valueEl.textContent = newValue;
+            
+            // Update minus button state
+            minusBtn.disabled = newValue === 0;
+            
+            // Update cart
+            const qtyItemEl = btn.closest('.product-card, .product-list-item');
+            const qtyItemName = qtyItemEl ? (qtyItemEl.querySelector('.product-name, .product-list-name')?.textContent.trim() || productId) : productId;
+            if (newValue === 0) {
+                delete cart[productId];
+            } else {
+                cart[productId] = { quantity: newValue, price: price, name: qtyItemName };
+            }
+            
+            // Update parent item visual
+            const parentItem = btn.closest('.product-list-item');
+            if (parentItem) {
+                if (newValue > 0) {
+                    parentItem.classList.add('selected');
+                } else {
+                    parentItem.classList.remove('selected');
+                }
+            }
+            
+            updateCartSummary();
+        }
+
+        // Update cart summary display
+        function updateCartSummary() {
+            let total = 0;
+            let itemCount = 0;
+            
+            for (let productId in cart) {
+                const item = cart[productId];
+                total += item.price * item.quantity;
+                itemCount += item.quantity;
+            }
+            
+            cartTotal = total;
+            
+            document.getElementById('cart-total').textContent = 'USD ' + total.toLocaleString();
+            document.getElementById('items-count').textContent = itemCount;
+            
+            // Show/hide cart summary
+            const cartSummary = document.getElementById('cart-summary');
+            if (itemCount > 0) {
+                cartSummary.classList.add('visible');
+            } else {
+                cartSummary.classList.remove('visible');
+            }
+        }
+
+        // Proceed to checkout.
+        // Items with a Shopify variant ID go to the Shopify cart; if ANY
+        // selected item has no variant ID yet, the whole selection is sent
+        // as a prefilled WhatsApp message instead, so nothing is dropped.
+        function proceedToCheckout() {
+            if (Object.keys(cart).length === 0) {
+                alert('Please select at least one add-on to proceed.');
+                return;
+            }
+
+            const cartItems = [];
+            let hasMissingVariant = false;
+
+            for (let productId in cart) {
+                const variantId = VARIANT_IDS[productId];
+                if (variantId) {
+                    cartItems.push(`${variantId}:${cart[productId].quantity}`);
+                } else {
+                    hasMissingVariant = true;
+                }
+            }
+
+            if (hasMissingVariant || cartItems.length === 0) {
+                // WhatsApp fallback with the full selection
+                let msg = 'Hello Yogi Nomads! I would like to personalize my Sri Lanka retreat with:\n';
+                for (let productId in cart) {
+                    const item = cart[productId];
+                    msg += `\n- ${item.name} x${item.quantity} (USD ${item.price * item.quantity})`;
+                }
+                msg += `\n\nTotal: USD ${cartTotal.toLocaleString()}`;
+                window.open('https://wa.me/9613543547?text=' + encodeURIComponent(msg), '_blank');
+                return;
+            }
+
+            // All items are available online — go to Shopify checkout
+            window.location.href = `https://${SHOPIFY_DOMAIN}/cart/${cartItems.join(',')}?checkout`;
+        }
+
+        // Initialize on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            updateCartSummary();
+        });
+    </script>
+
+</body>
+</html>

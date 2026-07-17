@@ -23,7 +23,7 @@
     <link rel="preload" as="image" href="island.jpeg" fetchpriority="high">
     <link rel="preload" as="image" href="Beige-and-Blue.png">
     <link rel="preload" as="image" href="Black-and-Blue.png">
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Lato:wght@300;400&family=Montserrat:wght@300;400;500;600&family=Poppins:wght@200;300;400&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Lato:wght@300;400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet"/>
     <style>
         :root {
             --cream: #FDF8F3;
@@ -1983,6 +1983,7 @@
             font-size: 0.85rem;
             font-style: normal;
             color: var(--warm-taupe);
+            text-align: center;
         }
 
         /* Pricing Section Redesign */
@@ -2091,7 +2092,7 @@
 
         .price-display {
             text-align: center;
-            margin-top: 2rem;
+            margin-top: 0.25rem;
             margin-bottom: 2rem;
         }
 
@@ -3139,6 +3140,7 @@
         .booking-guidelines-link {
             font-family: 'Montserrat', sans-serif;
             font-size: 0.85rem;
+            font-weight: 700;
             color: var(--warm-taupe);
             text-decoration: underline;
             transition: color 0.3s ease;
@@ -3554,7 +3556,7 @@
             
             .mobile-testimonials-subtitle {
                 display: block;
-                font-size: 0.75rem !important;  /* Decreased from 0.85rem */
+                font-size: 0.85rem !important;  /* match other mobile section subtitles */
                 white-space: normal;
                 padding: 0 1rem;
             }
@@ -4282,12 +4284,76 @@
         }
         /* SPACING-SYSTEM-V1 END */
 
+        /* V2.1 punch-list fixes */
+        /* Package items read left-aligned on all viewports; note stays centered */
+        .inclusion-item {
+            text-align: left;
+        }
+
+        @media (max-width: 768px) {
+            /* Hero eyebrow fits on a single line */
+            .hero-eyebrow {
+                white-space: nowrap !important;
+                font-size: clamp(0.72rem, 3.4vw, 1.1rem) !important;
+                letter-spacing: 0.04em !important;
+            }
+            /* Experience intro matches the "Few places reveal" intro size */
+            .sample-day-section .section-script.daily-rhythm-text {
+                font-size: 1rem !important;
+            }
+            /* Green and white pricing boxes always the same height */
+            .cta-box {
+                min-height: 184px;
+            }
+            /* "Beyond Yoga. Beyond Travel." a touch more present */
+            .final-cta-ready-embark .section-title {
+                font-size: 1.45rem !important;
+                line-height: 1.35 !important;
+            }
+        }
+
+        /* Line break shown only on mobile (e.g. "No experience required." on its own line) */
+        .mobile-line-break-only { display: none; }
+
+        /* Mobile-only photo separating the Yoga section from Meet Your Host */
+        .yoga-mobile-separator { display: none; }
+
+        @media (max-width: 768px) {
+            .mobile-line-break-only { display: inline; }
+            .yoga-mobile-separator {
+                display: block;
+                width: 100%;
+                height: 46vh;
+                min-height: 280px;
+                object-fit: cover;
+                object-position: center 30%;
+            }
+        }
+
+        /* Desktop: award-banner subtitle stays on one line */
+        @media (min-width: 1025px) {
+            .final-cta-proven-format .final-cta-text {
+                white-space: nowrap;
+                font-size: clamp(0.95rem, 1.3vw, 1.2rem);
+            }
+        }
+
+        /* Desktop: Yoga section hugs its content instead of forcing 60vh */
+        @media (min-width: 769px) {
+            .distinct-yoga-section {
+                height: auto !important;
+                min-height: 0 !important;
+                padding: 3.5rem 1rem !important;
+            }
+        }
+
         /* ==================================================================
            WHO THIS JOURNEY IS FOR — self-contained section, all selectors
            scoped under .journey-section so nothing here touches the rest
            of the page. Colors reuse the site's existing gold/cream tokens
-           instead of new hex values; fonts reuse Cormorant + a new Poppins
-           import (added to the Google Fonts link) for the lighter grid text.
+           instead of new hex values; fonts reuse Cormorant Garamond for the
+           title/eyebrow and Montserrat for body copy, matching every other
+           section on the page (no separate font import needed).
            ================================================================== */
         .journey-section {
             --gold: var(--soft-gold);
@@ -4300,7 +4366,7 @@
             overflow: hidden;
             padding: clamp(3.5rem, 7vw, 6rem) clamp(1.25rem, 5vw, 4rem);
             text-align: center;
-            font-family: 'Poppins', 'Montserrat', sans-serif;
+            font-family: 'Montserrat', sans-serif;
 
             background-image:
                 linear-gradient(rgba(11,13,20,0.42), rgba(11,13,20,0.36)),
@@ -4527,7 +4593,7 @@
         <div class="hero-overlay"></div>
         
         <div class="hero-content">
-            <p class="hero-eyebrow">REVEALED &mdash; A Curated Wellness &amp; Cultural Immersion</p>
+            <p class="hero-eyebrow">A Curated Wellness &amp; Cultural Immersion</p>
             <h1 class="hero-title">
                 Sri Lanka Luxury <em>Yoga Retreat</em>
             </h1>
@@ -4535,7 +4601,7 @@
                 <span>November 26 &ndash; December 3, 2026</span>
             </div>
             <div class="hero-ctas">
-                <a href="#pricing" class="hero-cta-secondary">Reveal</a>
+                <a href="#pricing" class="hero-cta-secondary">Reveal Sri Lanka to me!</a>
             </div>
         </div>
     </section>
@@ -4559,8 +4625,8 @@
                     <span class="feature-description">Designed &amp; personally hosted by Lina Aoun.</span>
                 </div>
                 <div class="feature-item">
-                    <span class="feature-heading">Award-winning stays</span>
-                    <span class="feature-description">3 remarkable luxurious hotels. 3 different worlds.</span>
+                    <span class="feature-heading">3 remarkable luxurious hotels</span>
+                    <span class="feature-description">3 completely different worlds.</span>
                 </div>
                 <div class="feature-item">
                     <span class="feature-heading">160+ Yogi Nomads retreats</span>
@@ -4602,67 +4668,25 @@
         </div>
         <div class="sample-day-strips">
             <div class="sample-day-strip sample-day-strip--banner">
-                <img src="ancient-strip.jpg" alt="Ancient Sri Lanka Revealed &mdash; Sunrise Sigiriya Fortress climb, Royal Botanical Gardens, sacred temple rituals, Kandyan dance experience, ancient kingdoms &amp; sacred heritage, lotus boat journey" loading="lazy"/>
+                <img src="Ancient.jpg" alt="Ancient Sri Lanka Revealed &mdash; Sunrise Sigiriya Fortress climbing*, Royal Botanical Gardens, sacred temple rituals, Kandyan dance experience, ancient kingdoms &amp; sacred heritage, lotus boat journey" loading="lazy"/>
             </div>
-            <div class="sample-day-strip">
-                <div class="sample-day-strip-bg">
-                    <img src="1327.jpg" alt="People and local life" loading="lazy"/>
-                </div>
-                <div class="sample-day-strip-overlay"></div>
-                <div class="sample-day-strip-content">
-                    <div class="sample-day-keyword">People &amp; Local Life Revealed</div>
-                    <div class="sample-day-subtext">Traditional village experience · Cooking &amp; dining with locals · Pottery traditions · Handmade paper artistry · Tea plucking with farmers · Ella&rsquo;s caf&eacute;s &amp; streets · Galle Fort history &amp; boutiques strolls</div>
-                </div>
+            <div class="sample-day-strip sample-day-strip--banner">
+                <img src="People.jpg" alt="People &amp; Local Life Revealed &mdash; Traditional village experience, cooking &amp; dining with locals, pottery traditions, handmade paper artistry, tea plucking with farmers, Ella&rsquo;s caf&eacute;s &amp; streets, Galle Fort history &amp; boutiques strolls" loading="lazy"/>
             </div>
-            <div class="sample-day-strip">
-                <div class="sample-day-strip-bg">
-                    <img src="40921.jpg" alt="Ayurveda treatments" loading="lazy"/>
-                </div>
-                <div class="sample-day-strip-overlay"></div>
-                <div class="sample-day-strip-content">
-                    <div class="sample-day-keyword">Ayurveda Revealed</div>
-                    <div class="sample-day-subtext">Meet the Ayurvedic Doctor · Your personal Dosha consultation · Lifestyle &amp; nutrition recommendations · Personalized Ayurveda experience · Healing oil therapies &amp; signature treatments</div>
-                </div>
+            <div class="sample-day-strip sample-day-strip--banner">
+                <img src="Ayurveda.jpg" alt="Ayurveda Revealed &mdash; Meet the Ayurvedic Doctor, your personal Dosha consultation, lifestyle &amp; nutrition recommendations, personalized Ayurveda experience, healing oil therapies &amp; signature treatments" loading="lazy"/>
             </div>
-            <div class="sample-day-strip">
-                <div class="sample-day-strip-bg">
-                    <img src="182924.jpg" alt="Tea country misty highlands" loading="lazy"/>
-                </div>
-                <div class="sample-day-strip-overlay"></div>
-                <div class="sample-day-strip-content">
-                    <div class="sample-day-keyword">Tea Country &amp; Colonial Times Revealed</div>
-                    <div class="sample-day-subtext">Tea plucking experience · Tea estates visit &amp; Ceylon tea tasting · Colonial heritage, elegance and towns · The Misty Highlands of Sri Lanka</div>
-                </div>
+            <div class="sample-day-strip sample-day-strip--banner">
+                <img src="Tea.jpg" alt="Tea Country &amp; Colonial Times Revealed &mdash; Tea plucking experience*, tea estates visit &amp; Ceylon tea tasting, colonial heritage, elegance and towns, the Misty Highlands of Sri Lanka" loading="lazy"/>
             </div>
-            <div class="sample-day-strip">
-                <div class="sample-day-strip-bg">
-                    <img src="island.jpeg" alt="Wild Sri Lanka" loading="lazy"/>
-                </div>
-                <div class="sample-day-strip-overlay"></div>
-                <div class="sample-day-strip-content">
-                    <div class="sample-day-keyword">Wild Sri Lanka Revealed</div>
-                    <div class="sample-day-subtext">Jungle immersion resort living · Minneriya wild elephant encounters · Yala Safari</div>
-                </div>
+            <div class="sample-day-strip sample-day-strip--banner">
+                <img src="Wild.jpg" alt="Wild Sri Lanka Revealed &mdash; Jungle immersion resort living, Minneriya wild elephant encounters*, Yala Safari*" loading="lazy"/>
             </div>
-            <div class="sample-day-strip">
-                <div class="sample-day-strip-bg">
-                    <img src="3rd-strip.jpg" alt="Southern coast beaches" loading="lazy"/>
-                </div>
-                <div class="sample-day-strip-overlay"></div>
-                <div class="sample-day-strip-content">
-                    <div class="sample-day-keyword">The Southern Coast Revealed</div>
-                    <div class="sample-day-subtext">Golden beaches &amp; turquoise waters · Ocean adventures · Slow coastal afternoons · Star-lit cinema · Hiriketiya Beach Night*</div>
-                </div>
+            <div class="sample-day-strip sample-day-strip--banner">
+                <img src="Southern.jpg" alt="The Southern Coast Revealed &mdash; Golden beaches &amp; turquoise waters, ocean adventures, slow coastal afternoons, star-lit cinema, Hiriketiya Beach Night*" loading="lazy"/>
             </div>
-            <div class="sample-day-strip">
-                <div class="sample-day-strip-bg">
-                    <img src="full4.jpg" alt="Spiritual Sri Lanka" loading="lazy" style="object-position: center 70%;"/>
-                </div>
-                <div class="sample-day-strip-overlay"></div>
-                <div class="sample-day-strip-content">
-                    <div class="sample-day-keyword">Spiritual Sri Lanka Revealed</div>
-                    <div class="sample-day-subtext">Sacred temple meditation &amp; sound bath · Private conversation with a Buddhist monk · Buddhist philosophy · Guided labyrinth meditation · Silent lagoon boat journey · Sacred temple visits</div>
-                </div>
+            <div class="sample-day-strip sample-day-strip--banner">
+                <img src="Spiritual.jpg" alt="Spiritual Sri Lanka Revealed &mdash; Sacred temple meditation &amp; sound bath, private conversation with a Buddhist monk, Buddhist philosophy, guided labyrinth meditation, silent lagoon boat journey, sacred temple visits" loading="lazy"/>
             </div>
         </div>
     </section>
@@ -4696,11 +4720,11 @@
             <h2 class="section-title villas-main-title" style="font-weight: 700; color: white;"><span class="desktop-villas-title">Your Sanctuary <span class="mobile-hide-dot-villas">· </span>Curated 5* Hospitality</span><span class="mobile-villas-title">Your Sanctuary<br/>·Curated 5* Hospitality·</span></h2>
             <div style="margin-top: 1rem; text-align: center;">
                 <p class="villas-resort-subtitle" style="font-family: 'Montserrat', sans-serif; font-size: 1.15rem; font-weight: 500; color: #D4B896; letter-spacing: 0.02em; line-height: 1.6; word-spacing: 0.1em; text-align: center; max-width: 800px; margin: 0 auto;">
-                    <span class="desktop-resort-subtitle">Hotels &amp; Resorts Internationally recognized. Carefully Chosen.</span>
-                    <span class="mobile-resort-subtitle">Hotels &amp; Resorts<br/>Internationally recognized. Carefully Chosen.</span>
+                    <span class="desktop-resort-subtitle">Internationally recognized. Carefully Chosen.</span>
+                    <span class="mobile-resort-subtitle">Internationally recognized. Carefully Chosen.</span>
                 </p>
                 <p style="font-family: 'Montserrat', sans-serif; font-size: 1rem; font-weight: 400; color: white; letter-spacing: 0.02em; line-height: 1.6; word-spacing: 0.1em; text-align: center; margin-top: 0.5rem;">
-                    Three exceptional properties, each revealing a different face of Sri Lanka&mdash;from jungle serenity and colonial elegance to oceanfront luxury.
+                    Three exceptional hotels &amp; resorts, each revealing a different face of Sri Lanka&mdash;from jungle serenity and colonial elegance to oceanfront luxury.
                 </p>
             </div>
         </div>
@@ -4722,7 +4746,7 @@
                     <div class="villa-img">
                         <img src="IMG_7413.webp" alt="Anantara Peace Haven" loading="lazy"/>
                     </div>
-                    <p class="villa-caption">Anantara Peace Haven<span class="villa-award">Sri Lanka&rsquo;s Leading Luxury Resort 2025 by World Travel Awards</span></p>
+                    <p class="villa-caption">Anantara Peace Haven<span class="villa-award">Sri Lanka&rsquo;s Leading Luxury Resort by World Travel Awards</span></p>
                 </div>
             </div>
         </div>
@@ -4736,10 +4760,11 @@
             <div style="margin-top: 1.75rem;">
                 <p class="desktop-yoga-paragraph" style="font-family: 'Montserrat', sans-serif; font-size: 1rem; font-weight: 400; text-align: center; letter-spacing: 0.02em; line-height: 1.6; word-spacing: 0.1em; color: var(--deep-teal); margin: 0 auto 1rem auto; max-width: 900px;">Move through Yogi Nomads&rsquo; signature contemporary yoga while discovering Sri Lanka&rsquo;s living traditions through meditation, Buddhist philosophy and local teachers.</p>
                 <p class="mobile-yoga-paragraph" style="font-family: 'Montserrat', sans-serif; font-size: 1rem; font-weight: 400; text-align: justify; letter-spacing: 0.02em; line-height: 1.6; word-spacing: 0.1em; color: var(--deep-teal); margin: 0 auto 1rem auto; max-width: 100%; display: none;">Move through Yogi Nomads&rsquo; signature contemporary yoga while discovering Sri Lanka&rsquo;s living traditions through meditation, Buddhist philosophy and local teachers.</p>
-                <p style="font-family: 'Montserrat', sans-serif; font-size: 1rem; font-weight: 600; text-align: center; letter-spacing: 0.02em; line-height: 1.6; word-spacing: 0.1em; color: var(--deep-teal); margin-bottom: 0; white-space: nowrap;">Welcoming to every level. No experience required.</p>
+                <p style="font-family: 'Montserrat', sans-serif; font-size: 1rem; font-weight: 600; text-align: center; letter-spacing: 0.02em; line-height: 1.6; word-spacing: 0.1em; color: var(--deep-teal); margin-bottom: 0;">Welcoming to every level.<span class="mobile-line-break-only"><br/></span> No experience required.</p>
             </div>
         </div>
     </div>
+    <img src="IMG_0078.JPG" alt="Yoga practice on the beach" loading="lazy" class="yoga-mobile-separator"/>
 
     <!-- Founder Section -->
     <section class="founder" id="founder">
@@ -4798,8 +4823,8 @@
                     </video>
             </div>
                 <div class="video-card">
-                    <video controls loop playsinline preload="metadata" poster="IMG_8085.webp">
-                        <source src="6.MP4" type="video/mp4">
+                    <video controls loop playsinline preload="metadata" poster="raw-poster.jpg">
+                        <source src="Raw.mp4" type="video/mp4">
                     </video>
             </div>
                 <div class="video-card">
@@ -4820,8 +4845,8 @@
                     </video>
                 </div>
                 <div class="video-card">
-                    <video controls loop playsinline preload="metadata" poster="IMG_8085.webp">
-                        <source src="6.MP4" type="video/mp4">
+                    <video controls loop playsinline preload="metadata" poster="raw-poster.jpg">
+                        <source src="Raw.mp4" type="video/mp4">
                     </video>
                 </div>
                 <div class="video-card">
@@ -4841,8 +4866,8 @@
                     </video>
                 </div>
                 <div class="video-card">
-                    <video controls loop playsinline preload="metadata" poster="IMG_8077.webp">
-                        <source src="7.mp4" type="video/mp4">
+                    <video controls loop playsinline preload="metadata" poster="experience-poster.jpg">
+                        <source src="Experience.mp4" type="video/mp4">
                     </video>
                 </div>
                 <div class="slideshow-arrows">
@@ -5110,7 +5135,7 @@
                         <svg class="check" viewBox="0 0 24 24" fill="none" stroke-width="2">
                             <path d="M20 6L9 17l-5-5"/>
                         </svg>
-                        Tea plucking experience &amp; Factory tour
+                        Tea plucking experience &amp; Factory tour*
                     </div>
                     <div class="inclusion-item">
                         <svg class="check" viewBox="0 0 24 24" fill="none" stroke-width="2">
@@ -5332,7 +5357,7 @@
     <!-- Final CTA Duplicate -->
     <section class="final-cta final-cta-ready-embark" style="background-color: #FDF8F3; min-height: auto; padding: 3rem 1rem;">
         <div class="final-cta-content">
-            <h2 class="section-title" style="font-weight: 600; color: var(--deep-teal);">Beyond Yoga. Beyond Travel. This is Sri Lanka, Revealed.</h2>
+            <h2 class="section-title" style="font-weight: 600; color: var(--deep-teal);">Beyond Yoga. Beyond Travel.<br/>This is Sri Lanka, Revealed.</h2>
             <div class="final-cta-buttons" style="margin-top: 1.5rem; margin-bottom: 1rem;">
                 <a href="#pricing" class="final-cta-btn final-cta-btn-primary" style="background: var(--deep-teal); color: white;">
                     RESERVE YOUR PLACE
@@ -5391,7 +5416,7 @@
                     <path d="M3 2.5a2.5 2.5 0 0 1 5 0 2.5 2.5 0 0 1 5 0v.006c0 .07 0 .27-.038.494H15a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1v7.5a1.5 1.5 0 0 1-1.5 1.5h-11A1.5 1.5 0 0 1 1 14.5V7a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h2.038A2.968 2.968 0 0 1 3 2.506V2.5zm1.068.5H7v-.5a1.5 1.5 0 1 0-3 0c0 .085.002.274.045.43a.522.522 0 0 0 .023.07zM9 3h2.932a.56.56 0 0 0 .023-.07c.043-.156.045-.345.045-.43a1.5 1.5 0 0 0-3 0V3zM1 4v2h6V4H1zm8 0v2h6V4H9zm5 3H9v8h4.5a.5.5 0 0 0 .5-.5V7zm-7 8V7H2v7.5a.5.5 0 0 0 .5.5H7z"/>
                 </svg>
             </div>
-            <h3 class="section-title" style="text-align: center; margin-bottom: 1rem; color: var(--deep-teal); font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: clamp(1.15rem, 2.4vw, 1.55rem); line-height: 1.35; letter-spacing: 0.01em;">Pay in Full upon Booking &amp; unlock Exclusive Privileges</h3>
+            <h3 class="section-title" style="text-align: center; margin-bottom: 1rem; color: var(--deep-teal); font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: clamp(1.05rem, 1.8vw, 1.3rem); line-height: 1.35; letter-spacing: 0.01em;">Pay in Full upon Booking &amp; unlock Exclusive Privileges</h3>
             <ul style="list-style: none; padding: 0; margin: 0 0 1rem 0; color: var(--deep-teal); font-family: 'Montserrat', sans-serif; font-weight: 400; font-size: 0.85rem; line-height: 1.75; text-align: left;">
                 <li>• Complimentary Ayurvedic Treatment</li>
                 <li>• Exclusive Access to N&#332;MADS Wardrobe Collection &lsquo;Sri Lanka Capsule&rsquo;</li>
